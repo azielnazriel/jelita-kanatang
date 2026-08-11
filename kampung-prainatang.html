@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jelita.kanatang — Detail Destinasi Wisata</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JavaScript and Tailwind -->
+  <script src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="page-detail bg-gray-50">
+
+<!-- ═══════════════════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════════════════ -->
+<header id="site-header" role="banner" class="bg-white/80 backdrop-blur-md shadow-sm">
+  <div class="nav-inner">
+    <a href="index.html#home" class="nav-logo" id="logo-link" aria-label="jelita.kanatang homepage">
+      <span class="nav-logo-img" aria-hidden="true" title="Logo placeholder — replace with img tag">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V21H3V9.5z"/><rect x="9" y="14" width="6" height="7"/></svg>
+      </span>
+      <span style="color:#2D6A4F;">jelita</span><span style="color:#111;">.kanatang</span>
+    </a>
+    <nav class="new-nav-links" id="main-nav" aria-label="Main navigation">
+      <a href="index.html#home" id="nav-link-home">Home</a>
+      <a href="index.html#about" id="nav-link-about">About</a>
+      <a href="index.html#wisata" id="nav-link-wisata" class="active">Desa Wisata</a>
+      <div class="new-dropdown-wrapper">
+        <a href="index.html#umkm-pangan" id="nav-link-umkm" aria-haspopup="true">
+          UMKM
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-left:2px;" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </a>
+        <div class="new-dropdown-menu" role="menu">
+          <a href="index.html#umkm-pangan" role="menuitem" id="nav-umkm-pangan">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a5 5 0 0 1 5 5c0 5-5 13-5 13S7 12 7 7a5 5 0 0 1 5-5z"/></svg>
+            UMKM Pangan Lokal
+          </a>
+          <a href="index.html#umkm-desa" role="menuitem" id="nav-umkm-desa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            UMKM Desa
+          </a>
+        </div>
+      </div>
+      <a href="index.html#mitra" class="new-nav-mitra" id="nav-mitra-btn">Mitra</a>
+    </nav>
+    <button class="new-hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" style="color:#111;">
+      <span id="hb-1" style="background:#111;"></span>
+      <span id="hb-2" style="background:#111;"></span>
+      <span id="hb-3" style="background:#111;"></span>
+    </button>
+  </div>
+</header>
+
+<nav class="new-mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="index.html#home" id="mob-home">Home</a>
+  <a href="index.html#about" id="mob-about">About</a>
+  <a href="index.html#wisata" id="mob-wisata">Desa Wisata</a>
+  <a href="index.html#umkm-pangan" id="mob-umkm-pangan">UMKM Pangan Lokal</a>
+  <a href="index.html#umkm-desa" id="mob-umkm-desa">UMKM Desa</a>
+  <a href="index.html#mitra" class="mob-mitra" id="mob-mitra">Mitra</a>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     DESTINATION DETAIL CONTENT
+═══════════════════════════════════════════════════════ -->
+<main class="pt-32 pb-24 px-6 max-w-5xl mx-auto">
+  
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="text-sm text-gray-500 mb-6 font-sans">
+    <ol class="flex space-x-2">
+      <li><a href="index.html" class="hover:text-green-700 transition">Beranda</a></li>
+      <li><span class="mx-2">/</span></li>
+      <li><a href="index.html#wisata" class="hover:text-green-700 transition">Desa Wisata</a></li>
+      <li><span class="mx-2">/</span></li>
+      <li class="text-gray-800 font-medium" aria-current="page">Kampung Adat Prainatang</li>
+    </ol>
+  </nav>
+
+  <!-- Title & Meta -->
+  <header class="mb-10 text-center">
+    <span class="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-bold uppercase tracking-wider rounded-full mb-4">Destinasi Alam</span>
+    <h1 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">Pesona Kampung Adat Prainatang</h1>
+    <div class="flex items-center justify-center space-x-6 text-gray-600 text-sm font-sans">
+      <span class="flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> Pesisir Timur, Desa Mondu</span>
+      <span class="flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 15 Menit dari Pusat Desa</span>
+    </div>
+  </header>
+
+  <!-- Modern Photo Slider -->
+  <section class="mb-16 relative" id="featured-slider">
+    <div class="w-full h-[60vh] min-h-[400px] rounded-3xl overflow-hidden relative shadow-2xl" id="slider-viewport">
+      <div class="flex w-full h-full" id="slider-track" style="transition: transform 0.5s ease;">
+        <!-- Slide 1 -->
+        <div class="w-full h-full flex-shrink-0 relative">
+          <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-500 font-sans text-lg">
+            [Photo 1 Placeholder]
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="w-full h-full flex-shrink-0 relative">
+          <div class="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-600 font-sans text-lg">
+            [Photo 2 Placeholder]
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="w-full h-full flex-shrink-0 relative">
+          <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-500 font-sans text-lg">
+            [Photo 3 Placeholder]
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Navigation Controls -->
+      <button class="absolute top-1/2 left-4 -translate-y-1/2 w-12 h-12 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-gray-800 shadow hover:bg-white transition z-10" id="slider-prev" aria-label="Previous image">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button class="absolute top-1/2 right-4 -translate-y-1/2 w-12 h-12 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-gray-800 shadow hover:bg-white transition z-10" id="slider-next" aria-label="Next image">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+      
+      <!-- Dots -->
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+        <button class="new-dot active w-2.5 h-2.5 rounded-full bg-white/50 transition" aria-label="Go to slide 1"></button>
+        <button class="new-dot w-2.5 h-2.5 rounded-full bg-white/50 transition" aria-label="Go to slide 2"></button>
+        <button class="new-dot w-2.5 h-2.5 rounded-full bg-white/50 transition" aria-label="Go to slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Description -->
+  <article class="prose prose-lg prose-green max-w-3xl mx-auto font-sans leading-relaxed text-gray-700">
+    <p class="text-xl text-gray-900 font-medium mb-6 leading-snug">
+      Hamparan pasir putih yang terbentang luas, deburan ombak biru jernih yang berpadu dengan angin laut tropis, dan tebing karang dramatis menjadikan Kampung Adat Prainatang sebagai surga tersembunyi di Pesisir Timur Sumba.
+    </p>
+
+    <p class="mb-6">
+      Tidak seperti pantai-pantai populer lainnya yang sering kali dipadati pengunjung, Kampung Adat Prainatang menawarkan kedamaian dan keheningan yang hakiki. Di pagi hari, Anda dapat menyaksikan para nelayan lokal kembali dari melaut dengan perahu kayu tradisional mereka, membawa hasil tangkapan segar yang sering kali langsung dijual di tepi pantai.
+    </p>
+
+    <h2 class="text-2xl font-display font-bold text-gray-900 mt-10 mb-4">Spot Fotografi dan Golden Hour</h2>
+    <p class="mb-6">
+      Bagi para pecinta fotografi, formasi batu karang di sisi barat pantai menciptakan siluet yang menakjubkan saat senja. Golden hour di Kampung Adat Prainatang sering kali menyuguhkan langit senja dengan perpaduan gradasi warna ungu, jingga, dan merah muda yang memantul sempurna di genangan air laut yang surut.
+    </p>
+
+    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 my-10">
+      <h3 class="text-lg font-bold text-gray-900 mb-3">Informasi Kunjungan</h3>
+      <ul class="space-y-2 text-sm">
+        <li class="flex"><strong class="w-32 text-gray-900">Akses Jalan:</strong> <span>Dapat dilalui kendaraan roda dua dan roda empat.</span></li>
+        <li class="flex"><strong class="w-32 text-gray-900">Fasilitas:</strong> <span>Area parkir terbatas, beberapa lopo (gazebo) tradisional untuk berteduh.</span></li>
+        <li class="flex"><strong class="w-32 text-gray-900">Waktu Terbaik:</strong> <span>Bulan Mei - Oktober, hindari puncak musim hujan.</span></li>
+      </ul>
+      <div class="mt-6 pt-6 border-t border-gray-100">
+        <button class="btn-lokasi w-full flex justify-center items-center py-3 bg-green-700 hover:bg-green-800 text-white font-semibold rounded-xl transition" data-name="Kampung Adat Prainatang" data-maps="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126560.2573!2d120.1500!3d-9.8500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2da18500eacb1e11%3A0x8c37c3aad8b03f9b!2sSumba%20Timur%2C%20East%20Nusa%20Tenggara!5e0!3m2!1sen!2sid!4v1690000000000">
+          <svg class="mr-2" width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5C5.515 1.5 3.5 3.515 3.5 6C3.5 9.5 8 14.5 8 14.5C8 14.5 12.5 9.5 12.5 6C12.5 3.515 10.485 1.5 8 1.5ZM8 7.5C7.172 7.5 6.5 6.828 6.5 6C6.5 5.172 7.172 4.5 8 4.5C8.828 4.5 9.5 5.172 9.5 6C9.5 6.828 8.828 7.5 8 7.5Z" fill="currentColor"/></svg>
+          Buka Peta Lokasi
+        </button>
+      </div>
+    </div>
+  </article>
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER (Replicated exactly)
+═══════════════════════════════════════════════════════ -->
+<div class="footer-pre-wrap" aria-hidden="true" style="background: #1A2E1A; height: 4rem; width: 100%;"></div>
+<footer class="footer" id="footer" style="margin-top:auto;">
+  <div class="footer-clip" aria-hidden="true"></div>
+  <div class="footer-inner" style="padding-top: 2rem;">
+    <!-- Footer Links Row -->
+    <div class="footer-links-row">
+      <div class="footer-brand">
+        <span class="footer-logo"><span class="logo-dot">•</span>jelita<span class="logo-accent">.kanatang</span></span>
+        <p class="footer-tagline">Portal Wisata dan UMKM Desa Mondu, Sumba Timur</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" id="footer-instagram" aria-label="Instagram jelita.kanatang">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="social-btn" id="footer-facebook" aria-label="Facebook jelita.kanatang">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" class="social-btn" id="footer-youtube" aria-label="YouTube jelita.kanatang">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42C22.4212 5.94541 22.1793 5.51057 21.8387 5.15941C21.498 4.80824 21.0708 4.55318 20.6 4.42C18.88 4 12 4 12 4C12 4 5.12 4 3.4 4.46C2.92925 4.59318 2.50198 4.84824 2.16135 5.19941C1.82072 5.55057 1.57879 5.98541 1.46 6.46C1.14521 8.20556 0.991235 9.97631 1 11.75C0.988787 13.537 1.14277 15.3213 1.46 17.08C1.59096 17.5398 1.83831 17.9581 2.17814 18.2945C2.51798 18.6308 2.93882 18.8738 3.4 19C5.12 19.46 12 19.46 12 19.46C12 19.46 18.88 19.46 20.6 19C21.0708 18.8668 21.498 18.6118 21.8387 18.2606C22.1793 17.9094 22.4212 17.4746 22.54 17C22.8524 15.2676 23.0063 13.5103 23 11.75C23.0112 9.96295 22.8573 8.1787 22.54 6.42Z" stroke="currentColor" stroke-width="2"/><path d="M9.75 15.02L15.5 11.75L9.75 8.48V15.02Z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-nav-col">
+        <h4 class="footer-nav-title">Navigasi</h4>
+        <ul class="footer-nav-list">
+          <li><a href="index.html#home" id="footer-nav-home">Home</a></li>
+          <li><a href="index.html#about" id="footer-nav-about">About</a></li>
+          <li><a href="index.html#wisata" id="footer-nav-wisata">Desa Wisata</a></li>
+          <li><a href="index.html#umkm-pangan" id="footer-nav-pangan">UMKM Pangan</a></li>
+          <li><a href="index.html#umkm-desa" id="footer-nav-desa">UMKM Desa</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <h4 class="footer-nav-title">Informasi</h4>
+        <ul class="footer-nav-list info-list">
+          <li>📍 Desa Mondu, Kec. Kanatang</li>
+          <li>🏙 Kab. Sumba Timur, NTT</li>
+          <li>✉ jelita.kanatang@gmail.com</li>
+          <li>📞 +62 821-xxxx-xxxx</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-copyright" id="footer-copyright">
+      <div class="copyright-divider"></div>
+      <p>© 2026 KKN PPM UGM - Bentang Kanatang | Universitas Kristen Wira Wacana Sumba</p>
+      <p class="copyright-sub"> </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════
+     MAPS MODAL
+═══════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="maps-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <div class="modal-pin-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 1C7.24 1 5 3.24 5 6C5 10 10 17 10 17C10 17 15 10 15 6C15 3.24 12.76 1 10 1ZM10 8C8.9 8 8 7.1 8 6C8 4.9 8.9 4 10 4C11.1 4 12 4.9 12 6C12 7.1 11.1 8 10 8Z" fill="currentColor"/></svg></div>
+        <h3 class="modal-title" id="modal-title">Lokasi</h3>
+      </div>
+      <button class="modal-close-btn" id="modal-close" aria-label="Tutup modal peta"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="modal-map-wrapper">
+      <iframe id="maps-iframe" src="" title="Peta Lokasi Wisata" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="modal-footer-bar">
+      <a href="#" id="modal-gmaps-link" target="_blank" rel="noopener noreferrer" class="modal-open-gmaps">Buka di Google Maps</a>
+    </div>
+  </div>
+</div>
+
+<button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas">
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+</body>
+</html>

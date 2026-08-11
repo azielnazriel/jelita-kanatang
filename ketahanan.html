@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jelita.kanatang — Detail UMKM Pangan</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JavaScript and Tailwind -->
+  <script src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="page-detail bg-[#FAF9F6]">
+
+<!-- ═══════════════════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════════════════ -->
+<header id="site-header" role="banner" class="bg-white/80 backdrop-blur-md shadow-sm">
+  <div class="nav-inner">
+    <a href="index.html#home" class="nav-logo" id="logo-link" aria-label="jelita.kanatang homepage">
+      <span class="nav-logo-img" aria-hidden="true" title="Logo placeholder — replace with img tag">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V21H3V9.5z"/><rect x="9" y="14" width="6" height="7"/></svg>
+      </span>
+      <span style="color:#2D6A4F;">jelita</span><span style="color:#111;">.kanatang</span>
+    </a>
+    <nav class="new-nav-links" id="main-nav" aria-label="Main navigation">
+      <a href="index.html#home" id="nav-link-home">Home</a>
+      <a href="index.html#about" id="nav-link-about">About</a>
+      <a href="index.html#wisata" id="nav-link-wisata">Desa Wisata</a>
+      <div class="new-dropdown-wrapper">
+        <a href="index.html#umkm-pangan" id="nav-link-umkm" aria-haspopup="true" class="active">
+          UMKM
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-left:2px;" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </a>
+        <div class="new-dropdown-menu" role="menu">
+          <a href="index.html#umkm-pangan" role="menuitem" id="nav-umkm-pangan">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a5 5 0 0 1 5 5c0 5-5 13-5 13S7 12 7 7a5 5 0 0 1 5-5z"/></svg>
+            UMKM Pangan Lokal
+          </a>
+          <a href="index.html#umkm-desa" role="menuitem" id="nav-umkm-desa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            UMKM Desa
+          </a>
+        </div>
+      </div>
+      <a href="index.html#mitra" class="new-nav-mitra" id="nav-mitra-btn">Mitra</a>
+    </nav>
+    <button class="new-hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" style="color:#111;">
+      <span id="hb-1" style="background:#111;"></span>
+      <span id="hb-2" style="background:#111;"></span>
+      <span id="hb-3" style="background:#111;"></span>
+    </button>
+  </div>
+</header>
+
+<nav class="new-mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="index.html#home" id="mob-home">Home</a>
+  <a href="index.html#about" id="mob-about">About</a>
+  <a href="index.html#wisata" id="mob-wisata">Desa Wisata</a>
+  <a href="index.html#umkm-pangan" id="mob-umkm-pangan">UMKM Pangan Lokal</a>
+  <a href="index.html#umkm-desa" id="mob-umkm-desa">UMKM Desa</a>
+  <a href="index.html#mitra" class="mob-mitra" id="mob-mitra">Mitra</a>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     UMKM PANGAN DETAIL CONTENT
+═══════════════════════════════════════════════════════ -->
+<main class="pt-32 pb-24 px-6 max-w-4xl mx-auto">
+  
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="text-sm text-gray-500 mb-8 font-sans">
+    <ol class="flex space-x-2">
+      <li><a href="index.html" class="hover:text-green-700 transition">Beranda</a></li>
+      <li><span class="mx-2">/</span></li>
+      <li><a href="index.html#umkm-pangan" class="hover:text-green-700 transition">UMKM Pangan Lokal</a></li>
+      <li><span class="mx-2">/</span></li>
+      <li class="text-gray-800 font-medium" aria-current="page">Ketahanan Pangan</li>
+    </ol>
+  </nav>
+
+  <!-- Large Featured Photo Placeholder -->
+  <section class="mb-12 relative w-full h-[50vh] min-h-[350px] rounded-3xl overflow-hidden shadow-xl bg-gray-200">
+    <div class="absolute inset-0 flex items-center justify-center text-gray-500 font-sans text-xl tracking-wide">
+      <img src="images/umkm/Ketahanan Pangan Lokal.jpg" />
+    </div>
+  </section>
+
+  <!-- Article Header -->
+  <header class="mb-10 text-center">
+    <h1 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">Ketahanan Pangan : Desa Mondu</h1>
+    <p class="text-lg text-gray-500 font-sans mb-6">Pangan</p>
+    <div class="flex items-center justify-center gap-4 text-sm font-sans text-gray-600 border-t border-b border-gray-200 py-3 w-fit mx-auto">
+      <!-- <span class="flex items-center"><svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Waktu Panen: April - Juni</span> -->
+      <span class="text-gray-300">|</span>
+      <!-- <span class="flex items-center"><svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Metode: Tumpang Sari Tradisional</span> -->
+    </div>
+  </header>
+
+  <!-- Article Content -->
+  <article class="prose prose-lg prose-green max-w-3xl mx-auto font-sans leading-relaxed text-gray-700">
+    <p class="text-xl text-gray-900 font-medium mb-6 leading-snug">
+      Desa Mondu: Ketika Kelimpahan Alam Menjadi Fondasi Ketahanan Pangan dan Harapan Ekonomi Lokal
+    </p>
+
+    <p class="mb-6">
+      Sumba Timur – Hamparan laut biru yang membentang di sepanjang pesisir Desa Mondu, Kecamatan Kanatang, Kabupaten Sumba Timur, tidak hanya menghadirkan panorama yang memanjakan mata. Di balik keindahan tersebut tersimpan cerita tentang sebuah desa yang memiliki ketahanan pangan lokal yang kuat. Bagi masyarakat Desa Mondu, alam bukan sekadar ruang hidup, melainkan sumber penghidupan yang telah memenuhi kebutuhan pangan keluarga selama bertahun-tahun.
+Selama menjalankan Kuliah Kerja Nyata (KKN), mahasiswa Universitas Gadjah Mada menemukan bahwa Desa Mondu memiliki kekayaan sumber daya alam yang luar biasa. Hasil laut yang melimpah berpadu dengan hasil pertanian dan perkebunan menjadikan desa ini sebagai salah satu kawasan yang mampu memenuhi kebutuhan pangan masyarakatnya secara mandiri. Hampir setiap hari, masyarakat dapat menikmati ikan segar hasil tangkapan nelayan, sayuran dari kebun sendiri, hingga jagung yang menjadi salah satu pangan pokok masyarakat Sumba.
+Berbeda dengan berbagai wilayah lain yang menghadapi tantangan ketersediaan pangan, persoalan utama di Desa Mondu bukanlah kekurangan makanan. Sebaliknya, masyarakat hidup di tengah kelimpahan hasil bumi yang mampu memenuhi kebutuhan sehari-hari. Tantangan yang dihadapi justru terletak pada bagaimana mengubah kelimpahan tersebut menjadi nilai ekonomi yang lebih besar sehingga mampu meningkatkan kesejahteraan keluarga.
+Setiap pagi, aktivitas para nelayan telah dimulai sejak matahari belum sepenuhnya terbit. Perahu-perahu sederhana kembali dari Laut Sawu membawa hasil tangkapan yang menjadi sumber protein utama masyarakat. Salah satu komoditas yang paling banyak diperoleh adalah ikan tembang. Ikan ini memiliki cita rasa yang khas, mudah diperoleh, dan menjadi lauk harian hampir di setiap rumah tangga di Desa Mondu.
+Melimpahnya hasil tangkapan membuat ikan tembang tidak pernah menjadi komoditas yang langka. Bahkan pada musim tertentu, jumlah tangkapan yang diperoleh nelayan jauh melebihi kebutuhan konsumsi rumah tangga. Sebagian besar hasil tangkapan kemudian dijual dalam kondisi segar kepada masyarakat sekitar atau dibawa ke pasar tradisional di wilayah sekitar Kecamatan Kanatang. Namun, karena belum banyak dilakukan proses pengolahan pascapanen, nilai jual ikan tersebut relatif rendah dan sangat dipengaruhi oleh kondisi pasar serta jumlah hasil tangkapan pada hari itu.
+Selain potensi kelautan, Desa Mondu juga memiliki lahan pertanian yang produktif. Masyarakat membudidayakan berbagai komoditas seperti jagung, sawi putih, cabai, tomat, daun kelor, singkong, ubi, dan berbagai jenis tanaman hortikultura lainnya. Sayuran yang dipanen setiap hari menjadi pelengkap kebutuhan gizi keluarga, sementara jagung masih menjadi salah satu sumber karbohidrat utama yang memiliki nilai budaya sekaligus ekonomi bagi masyarakat.
+Keberagaman komoditas tersebut mencerminkan bahwa sistem pangan di Desa Mondu tidak hanya bergantung pada satu sektor. Perikanan dan pertanian berjalan berdampingan sehingga menciptakan ketahanan pangan yang relatif stabil. Ketika hasil laut berkurang akibat cuaca, masyarakat masih memiliki hasil kebun untuk memenuhi kebutuhan pangan. Sebaliknya, ketika musim panen tiba, hasil pertanian menjadi penyangga ekonomi rumah tangga.
+Temuan lapangan mahasiswa KKN UGM menunjukkan bahwa sebagian besar keluarga di Desa Mondu memiliki akses terhadap sumber pangan yang cukup. Banyak masyarakat mengonsumsi hasil kebun sendiri serta hasil tangkapan laut tanpa harus bergantung sepenuhnya pada pasokan dari luar desa. Kondisi ini menunjukkan bahwa konsep ketahanan pangan di Desa Mondu telah terbentuk secara alami melalui pemanfaatan sumber daya lokal yang diwariskan secara turun-temurun.
+Namun demikian, potensi besar tersebut belum sepenuhnya memberikan dampak ekonomi yang optimal. Hasil bumi yang melimpah sebagian besar masih dipasarkan dalam bentuk bahan mentah. Akibatnya, masyarakat belum memperoleh nilai tambah yang seharusnya dapat dinikmati apabila komoditas tersebut diolah menjadi produk siap konsumsi dengan daya jual yang lebih tinggi.
+Dalam berbagai diskusi bersama masyarakat, muncul satu benang merah yang menarik. Warga Desa Mondu tidak mengeluhkan minimnya hasil laut maupun hasil pertanian. Mereka justru menyampaikan bahwa yang masih menjadi tantangan adalah pengetahuan mengenai cara mengolah hasil bumi tersebut menjadi produk yang memiliki nilai ekonomi lebih tinggi. Dengan kata lain, masyarakat tidak kekurangan sumber daya, tetapi masih membutuhkan inovasi, pendampingan, dan akses pasar agar potensi yang dimiliki dapat berkembang menjadi usaha yang berkelanjutan.
+Potensi tersebut sesungguhnya membuka peluang besar bagi tumbuhnya UMKM berbasis pangan lokal. Ikan tembang, misalnya, dapat diolah menjadi berbagai produk seperti ikan asap, ikan kering higienis, abon ikan, kerupuk ikan, bakso ikan, hingga sambal ikan kemasan yang memiliki masa simpan lebih panjang. Produk-produk tersebut tidak hanya meningkatkan nilai jual hasil tangkapan, tetapi juga membuka lapangan kerja baru bagi masyarakat, khususnya perempuan dan kelompok pemuda desa.
+Demikian pula dengan jagung yang selama ini lebih banyak dikonsumsi sebagai pangan pokok. Dengan sentuhan inovasi, jagung dapat diolah menjadi berbagai produk bernilai tambah seperti emping jagung, tepung jagung, keripik jagung, jagung sangrai, maupun makanan ringan khas yang memiliki potensi dipasarkan sebagai oleh-oleh daerah. Sementara itu, hasil kebun seperti sawi putih dan berbagai sayuran lainnya juga dapat dikembangkan menjadi produk pangan olahan maupun komoditas yang dipasarkan melalui sistem pemasaran yang lebih modern.
+Melimpahnya bahan baku menjadi modal yang sangat penting bagi pengembangan ekonomi desa. Tidak banyak daerah yang memiliki kombinasi sumber daya kelautan dan pertanian sekaligus seperti yang dimiliki Desa Mondu. Oleh karena itu, penguatan kapasitas masyarakat dalam bidang pengolahan pangan, pengemasan produk, pemasaran digital, hingga manajemen usaha menjadi langkah strategis untuk mendorong lahirnya UMKM yang mampu bersaing.
+Bagi mahasiswa KKN UGM, potensi tersebut menjadi salah satu gambaran bahwa pembangunan desa tidak selalu harus dimulai dari penyediaan sumber daya baru. Dalam banyak kasus, solusi justru dapat lahir dari penguatan potensi yang telah dimiliki masyarakat. Desa Mondu telah memiliki sumber daya alam, masyarakat yang produktif, serta budaya gotong royong yang masih terjaga. Tantangan berikutnya adalah menghubungkan seluruh potensi tersebut dengan inovasi, teknologi, dan akses pasar.
+Pengembangan UMKM berbasis pangan lokal juga memiliki dampak yang lebih luas daripada sekadar peningkatan pendapatan. Ketika hasil laut dan hasil pertanian diolah menjadi produk bernilai tambah, maka rantai ekonomi desa akan bergerak lebih panjang. Munculnya usaha pengolahan akan menciptakan kebutuhan terhadap tenaga kerja, kemasan produk, distribusi, hingga pemasaran. Dengan demikian, manfaat ekonomi tidak hanya dirasakan oleh nelayan atau petani, tetapi juga oleh kelompok masyarakat lainnya.
+Di sisi lain, penguatan identitas pangan lokal juga menjadi bagian penting dalam memperkenalkan Desa Mondu kepada masyarakat luas. Produk olahan ikan tembang maupun pangan berbasis jagung memiliki peluang untuk menjadi identitas khas desa yang dapat dipromosikan dalam berbagai kegiatan pariwisata maupun pameran UMKM. Identitas tersebut bukan hanya menjadi simbol kebanggaan masyarakat, tetapi juga dapat memperkuat daya saing ekonomi lokal.
+Melalui potensi yang dimilikinya, Desa Mondu menunjukkan bahwa ketahanan pangan tidak semata-mata diukur dari kemampuan memenuhi kebutuhan konsumsi masyarakat. Ketahanan pangan juga mencerminkan kemampuan sebuah desa memanfaatkan sumber daya lokal secara berkelanjutan untuk menciptakan kesejahteraan. Desa ini telah membuktikan bahwa alam mampu menyediakan kebutuhan pangan masyarakat. Kini, tantangan berikutnya adalah memastikan bahwa kelimpahan tersebut juga mampu menghadirkan nilai ekonomi yang lebih besar.
+Harapannya, berbagai potensi yang dimiliki Desa Mondu dapat terus dikembangkan melalui kolaborasi antara masyarakat, pemerintah desa, perguruan tinggi, dan berbagai pemangku kepentingan lainnya. Dengan pendampingan yang tepat, inovasi pengolahan pangan, serta penguatan kapasitas UMKM, Desa Mondu memiliki peluang besar untuk tumbuh sebagai desa yang tidak hanya mandiri dalam pangan, tetapi juga unggul dalam pengembangan ekonomi berbasis potensi lokal.
+Desa Mondu telah memiliki fondasi yang kuat. Laut menyediakan ikan, tanah menghasilkan jagung dan aneka sayuran, sementara masyarakat memiliki semangat untuk terus bekerja. Kelimpahan itu sudah ada. Yang dibutuhkan kini bukan lagi mencari sumber daya baru, melainkan menghadirkan inovasi agar setiap hasil bumi yang dihasilkan mampu memberikan nilai tambah, meningkatkan pendapatan masyarakat, dan membawa kesejahteraan yang berkelanjutan bagi seluruh warga desa.
+    </p>
+
+    <!-- <h2 class="text-2xl font-display font-bold text-gray-900 mt-10 mb-4">Nilai Kultural dan Tradisi</h2>
+    <p class="mb-6">
+      Lebih dari sekadar sumber karbohidrat, jagung memiliki posisi sakral dalam kosmologi Marapu—kepercayaan asli masyarakat Sumba. Bulir-bulir jagung terbaik dari setiap panen akan disisihkan dan digantung di atas tungku perapian rumah adat (Uma Mbatang). Jagung ini dikeringkan oleh asap sebagai benih untuk musim tanam berikutnya, dan sebagian lagi disiapkan sebagai sajian utama dalam berbagai ritual adat, mulai dari upacara kelahiran, pernikahan, hingga kematian.
+    </p>
+
+    <h2 class="text-2xl font-display font-bold text-gray-900 mt-10 mb-4">Cita Rasa dan Olahan</h2>
+    <p class="mb-6">
+      Secara tekstur, jagung pulut Sumba sangat berbeda dengan jagung manis pada umumnya. Saat direbus, jagung ini menghasilkan tekstur yang sangat lengket (pulut) dan mengenyangkan, dengan rasa manis yang subtil dan sangat alami. Masyarakat Mondu sering mengolahnya menjadi <em class="text-gray-900">katemak</em>—semacam bubur jagung gurih yang dimasak bersama sayuran liar dan kacang-kacangan—menjadi comfort food yang menghangatkan suasana saat berkumpul bersama keluarga.
+    </p> -->
+
+    <!-- Support CTA -->
+    <!-- <div class="bg-white p-8 rounded-2xl shadow-sm border border-green-100 my-12 text-center">
+      <h3 class="text-xl font-bold text-gray-900 mb-3 font-display">Dukung Petani Lokal Mondu</h3>
+      <p class="text-gray-600 mb-6 text-sm">Dengan mengkonsumsi produk pangan lokal, Anda turut berkontribusi dalam menjaga ketahanan pangan desa dan melestarikan tradisi agrikultur Sumba Timur.</p>
+      <a href="index.html#mitra" class="inline-flex justify-center items-center px-8 py-3 bg-green-700 hover:bg-green-800 text-white font-semibold rounded-full transition">
+        Hubungi Koperasi Desa
+      </a>
+    </div> -->
+  </article>
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER (Replicated exactly)
+═══════════════════════════════════════════════════════ -->
+<div class="footer-pre-wrap" aria-hidden="true" style="background: #1A2E1A; height: 4rem; width: 100%;"></div>
+<footer class="footer" id="footer" style="margin-top:auto;">
+  <div class="footer-clip" aria-hidden="true"></div>
+  <div class="footer-inner" style="padding-top: 2rem;">
+    <!-- Footer Links Row -->
+    <div class="footer-links-row">
+      <div class="footer-brand">
+        <span class="footer-logo"><span class="logo-dot">•</span>jelita<span class="logo-accent">.kanatang</span></span>
+        <p class="footer-tagline">Portal Wisata dan UMKM Desa Mondu, Sumba Timur</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" id="footer-instagram" aria-label="Instagram jelita.kanatang">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="social-btn" id="footer-facebook" aria-label="Facebook jelita.kanatang">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" class="social-btn" id="footer-youtube" aria-label="YouTube jelita.kanatang">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42C22.4212 5.94541 22.1793 5.51057 21.8387 5.15941C21.498 4.80824 21.0708 4.55318 20.6 4.42C18.88 4 12 4 12 4C12 4 5.12 4 3.4 4.46C2.92925 4.59318 2.50198 4.84824 2.16135 5.19941C1.82072 5.55057 1.57879 5.98541 1.46 6.46C1.14521 8.20556 0.991235 9.97631 1 11.75C0.988787 13.537 1.14277 15.3213 1.46 17.08C1.59096 17.5398 1.83831 17.9581 2.17814 18.2945C2.51798 18.6308 2.93882 18.8738 3.4 19C5.12 19.46 12 19.46 12 19.46C12 19.46 18.88 19.46 20.6 19C21.0708 18.8668 21.498 18.6118 21.8387 18.2606C22.1793 17.9094 22.4212 17.4746 22.54 17C22.8524 15.2676 23.0063 13.5103 23 11.75C23.0112 9.96295 22.8573 8.1787 22.54 6.42Z" stroke="currentColor" stroke-width="2"/><path d="M9.75 15.02L15.5 11.75L9.75 8.48V15.02Z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-nav-col">
+        <h4 class="footer-nav-title">Navigasi</h4>
+        <ul class="footer-nav-list">
+          <li><a href="index.html#home" id="footer-nav-home">Home</a></li>
+          <li><a href="index.html#about" id="footer-nav-about">About</a></li>
+          <li><a href="index.html#wisata" id="footer-nav-wisata">Desa Wisata</a></li>
+          <li><a href="index.html#umkm-pangan" id="footer-nav-pangan">UMKM Pangan</a></li>
+          <li><a href="index.html#umkm-desa" id="footer-nav-desa">UMKM Desa</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <h4 class="footer-nav-title">Informasi</h4>
+        <ul class="footer-nav-list info-list">
+          <li>📍 Desa Mondu, Kec. Kanatang</li>
+          <li>🏙 Kab. Sumba Timur, NTT</li>
+          <li>✉ jelita.kanatang@gmail.com</li>
+          <li>📞 +62 821-xxxx-xxxx</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-copyright" id="footer-copyright">
+      <div class="copyright-divider"></div>
+      <p>© 2026 KKN PPM UGM - Bentang Kanatang | Universitas Kristen Wira Wacana Sumba</p>
+      <p class="copyright-sub"> </p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas">
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+</body>
+</html>

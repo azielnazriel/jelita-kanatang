@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jelita.kanatang — Detail Kerajinan Tenun</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JavaScript and Tailwind -->
+  <script src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="page-detail bg-[#FAF9F6]">
+
+<!-- ═══════════════════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════════════════ -->
+<header id="site-header" role="banner" class="bg-white/80 backdrop-blur-md shadow-sm">
+  <div class="nav-inner">
+    <a href="index.html#home" class="nav-logo" id="logo-link" aria-label="jelita.kanatang homepage">
+      <span class="nav-logo-img" aria-hidden="true" title="Logo placeholder — replace with img tag">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V21H3V9.5z"/><rect x="9" y="14" width="6" height="7"/></svg>
+      </span>
+      jelita<span>.kanatang</span>
+    </a>
+    <nav class="new-nav-links" id="main-nav" aria-label="Main navigation">
+      <a href="index.html#home" id="nav-link-home">Home</a>
+      <a href="index.html#about" id="nav-link-about">About</a>
+      <a href="index.html#wisata" id="nav-link-wisata">Desa Wisata</a>
+      <div class="new-dropdown-wrapper">
+        <a href="index.html#umkm-desa" id="nav-link-umkm" aria-haspopup="true" class="active">
+          UMKM
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-left:2px;" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </a>
+        <div class="new-dropdown-menu" role="menu">
+          <a href="index.html#umkm-pangan" role="menuitem" id="nav-umkm-pangan">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a5 5 0 0 1 5 5c0 5-5 13-5 13S7 12 7 7a5 5 0 0 1 5-5z"/></svg>
+            UMKM Pangan Lokal
+          </a>
+          <a href="index.html#umkm-desa" role="menuitem" id="nav-umkm-desa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            UMKM Desa
+          </a>
+        </div>
+      </div>
+      <a href="index.html#mitra" class="new-nav-mitra" id="nav-mitra-btn">Mitra</a>
+    </nav>
+    <button class="new-hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" style="color:#111;">
+      <span id="hb-1" style="background:#111;"></span>
+      <span id="hb-2" style="background:#111;"></span>
+      <span id="hb-3" style="background:#111;"></span>
+    </button>
+  </div>
+</header>
+
+<nav class="new-mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="index.html#home" id="mob-home">Home</a>
+  <a href="index.html#about" id="mob-about">About</a>
+  <a href="index.html#wisata" id="mob-wisata">Desa Wisata</a>
+  <a href="index.html#umkm-pangan" id="mob-umkm-pangan">UMKM Pangan Lokal</a>
+  <a href="index.html#umkm-desa" id="mob-umkm-desa">UMKM Desa</a>
+  <a href="index.html#mitra" class="mob-mitra" id="mob-mitra">Mitra</a>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     UMKM TENUN DETAIL CONTENT
+═══════════════════════════════════════════════════════ -->
+<main class="pt-32 pb-24 px-6 max-w-4xl mx-auto">
+  
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="text-sm text-gray-500 mb-8 font-sans">
+    <ol class="flex space-x-2">
+      <li><a href="index.html" class="hover:text-green-700 transition">Beranda</a></li>
+      <li><span class="mx-2">/</span></li>
+      <li><a href="index.html#umkm-desa" class="hover:text-green-700 transition">UMKM Desa</a></li>
+      <li><span class="mx-2">/</span></li>
+      <li class="text-gray-800 font-medium" aria-current="page">Kain Tenun Sumba</li>
+    </ol>
+  </nav>
+
+  <!-- Large Featured Photo Placeholder -->
+  <section class="mb-12 relative w-full h-[50vh] min-h-[350px] rounded-3xl overflow-hidden shadow-xl bg-gray-200">
+    <div class="absolute inset-0 flex items-center justify-center text-gray-500 font-sans text-xl tracking-wide">
+      <img src="images/umkm/Tenun Ikat Sumba.jpeg" />
+    </div>
+  </section>
+
+  <!-- Article Header -->
+  <header class="mb-10 text-center">
+    <h1 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">Kain Tenun Sumba</h1>
+    <p class="text-lg text-gray-500 font-sans mb-6">Disusun Oleh Tim KKN-PPM UGM Bentang Kanatang Subunit Desa Mondu</p>
+    <div class="flex items-center justify-center gap-4 text-sm font-sans text-gray-600 border-t border-b border-gray-200 py-3 w-fit mx-auto">
+      <!-- <span class="flex items-center"><svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Waktu Pengerjaan: 3 - 6 Bulan</span>
+      <span class="text-gray-300">|</span>
+      <span class="flex items-center"><svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Bahan: Pewarna Alam & Kapas Lokal</span> -->
+    </div>
+  </header>
+
+  <!-- Article Content -->
+  <article class="prose prose-lg prose-green max-w-3xl mx-auto font-sans leading-relaxed text-gray-700">
+    <p class="text-xl text-gray-900 font-medium mb-6 leading-snug">
+      Di Balik Selembar Kain Tenun Sumba: Ketelitian, Kesabaran, dan Nilai yang Tak Ternilai Menuju Produk Ekonomi Kreatif.
+    </p>
+
+    <p class="mb-6">
+       Sumba Timur – Suara hentakan kayu dari alat tenun bukan mesin terdengar pelan dari salah satu rumah di Desa Mondu, Kecamatan Kanatang, Kabupaten Sumba Timur. Di rumah sederhana itu, seorang perempuan duduk bersila sambil merapikan susunan benang yang membentang di hadapannya. Tangannya bergerak perlahan, menyisipkan setiap helai benang dengan ketelitian yang telah diasah selama bertahun-tahun.
+Bagi masyarakat setempat, pemandangan tersebut merupakan hal yang biasa. Aktivitas menenun masih menjadi bagian dari kehidupan sehari-hari, terutama bagi perempuan. Keterampilan itu diwariskan dari generasi ke generasi dan dipelajari sejak usia muda melalui kebiasaan di lingkungan keluarga.
+Selama melaksanakan Kuliah Kerja Nyata (KKN) di Desa Mondu, mahasiswa Universitas Gadjah Mada menjumpai bahwa tradisi menenun masih tetap bertahan di tengah perubahan zaman. Temuan ini sejalan dengan pendataan awal Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi yang mencatat terdapat 476 penenun aktif di wilayah Nusa Tenggara Timur, baik yang bekerja secara individu maupun dalam kelompok. Jumlah tersebut menjadikan NTT sebagai provinsi dengan maestro tenun terbanyak di antara wilayah lain yang menjadi fokus pendataan Kemendikbudristek.1 Di Desa Mondu sendiri, kemampuan menenun masih dimiliki oleh banyak perempuan, meskipun belum seluruh keluarga menjadikannya sebagai mata pencaharian utama. Sebagian besar hasil tenun digunakan untuk kebutuhan adat, sementara sebagian lainnya dipasarkan kepada pembeli dari luar daerah.
+    </p>
+
+    <h2 class="text-2xl font-display font-bold text-gray-900 mt-10 mb-4">Jejak Peradaban Megalitikum dalam Kain Tenun Sumba</h2>
+    <p class="mb-6">
+      Keberadaan tenun ikat di Pulau Sumba tidak dapat dilepaskan dari sejarah panjang kebudayaan megalitik yang hingga kini masih bertahan dalam kehidupan masyarakat. Berbeda dengan banyak daerah lain yang hanya menyisakan jejak arkeologis, tradisi megalitik di Sumba masih hidup melalui berbagai upacara adat dan sistem nilai yang diwariskan dari generasi ke generasi. Salah satu wujudnya dapat dilihat pada prosesi pemakaman adat, terutama bagi kalangan bangsawan, yang masih menggunakan kubur batu berukuran besar sebagai bagian dari ritual penghormatan kepada leluhur.
+Dalam tradisi tersebut, kain tenun ikat memegang peranan penting. Ratusan lembar kain dapat digunakan untuk menyelimuti jenazah sebagai simbol penghormatan terakhir sekaligus penanda status sosial keluarga. Kehadiran kain tenun dalam setiap tahapan upacara menunjukkan bahwa nilainya tidak hanya terletak pada aspek estetika, tetapi juga memiliki makna spiritual, sosial, dan budaya yang telah mengakar kuat dalam kehidupan masyarakat Sumba. Adapun jenis kain tenun yang mereka buat adalah hinggi (selimut), lau (sarung), tiara (ikat kepala,selendang), dan tamelingu (tudung kepala).
+    </p>
+
+    <h2 class="text-2xl font-display font-bold text-gray-900 mt-10 mb-4">Tenun Masih Menjadi Bagian dari Kehidupan Masyarakat</h2>
+    <p class="mb-6">
+      Di Sumba Timur, kain tenun bukan hanya berfungsi sebagai pakaian tradisional. Kain ini masih digunakan dalam berbagai upacara adat, mulai dari kelahiran, perkawinan, penyambutan tamu, hingga prosesi kematian. Setiap motif memiliki makna yang berbeda dan menjadi bagian dari identitas budaya masyarakat.
+Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi juga mencatat bahwa tenun ikat Sumba merupakan salah satu warisan budaya yang masih terjaga dengan baik. Berdasarkan pendataan ekosistem tenun yang dilakukan pada 2023, Pulau Sumba memiliki puluhan ragam motif yang sebagian besar masih diproduksi hingga saat ini. Tradisi tersebut tetap bertahan karena proses pewarisan pengetahuan dilakukan secara langsung di lingkungan keluarga maupun komunitas penenun.
+    </p>
+
+    <h2 class="text-2xl font-display font-bold text-gray-900 mt-10 mb-4">Proses Panjang di Balik Selembar Kain</h2>
+    <p class="mb-6">
+      Menyelesaikan satu lembar kain tenun membutuhkan waktu yang tidak singkat. Prosesnya dimulai dari menyiapkan benang, mengikat pola sesuai motif yang diinginkan, kemudian mewarnainya sebelum masuk ke tahap penenunan.
+Di sejumlah wilayah Sumba Timur, para penenun masih memanfaatkan pewarna alami yang diperoleh dari berbagai jenis tumbuhan, seperti akar mengkudu untuk menghasilkan warna merah, tumbuhan nila untuk warna biru, serta beberapa jenis kulit kayu dan tanaman lokal lainnya. Karena bergantung pada bahan-bahan alami, pilihan warnanya pun terbatas. Warna biru, merah hitam dan kuning, merupakan warna yang biasa digunakan.  Pemanfaatan bahan-bahan tersebut bukan sekadar pilihan teknis, melainkan bagian dari pengetahuan tradisional yang terus dipelihara hingga sekarang. 
+Proses pewarnaan menjadi salah satu tahapan yang paling memerlukan kesabaran. Untuk memperoleh warna yang kuat dan tahan lama, benang harus melalui proses perendaman dan pengeringan secara berulang. Tidak jarang tahapan ini berlangsung selama beberapa bulan, bahkan dapat mencapai lebih dari satu tahun, bergantung pada jenis warna yang diinginkan dan ketersediaan tanaman penghasil pewarna. Sebagian bahan baku hanya dapat dipanen pada musim tertentu, sehingga para penenun harus menyesuaikan seluruh proses produksi dengan siklus alam. Kondisi inilah yang membuat setiap lembar kain tenun Sumba bukan sekadar hasil kerajinan tangan, melainkan cerminan kesabaran, ketelitian, serta pengetahuan lokal yang diwariskan lintas generasi. 
+Tahap yang paling banyak menyita waktu adalah proses menenun. Setiap benang harus ditempatkan secara tepat agar motif yang telah dirancang muncul dengan sempurna. Kesalahan kecil dapat mengubah keseluruhan pola sehingga pekerjaan harus diperbaiki kembali. Perihal motif tenun, Sumba secara keseluruhan memiliki 85 jenis motif yang 94 persen motifnya masih tetap bertahan hingga hari ini serta ada pengembangan. Biasanya motif diambil dari bentuk flora fauna serta simbol yang identik dengan kepercayaan Marapu, sebuah kepercayaan yang dianut oleh masyarakat di Sumba.3
+Tidak mengherankan apabila penyelesaian satu lembar kain dapat memakan waktu berminggu-minggu, bahkan berbulan-bulan, tergantung ukuran dan tingkat kerumitan motif. Karena proses pembuatannya dilakukan secara manual, nilai sebuah kain tenun tidak hanya ditentukan oleh bahan bakunya. Waktu, keterampilan, pengalaman, dan pengetahuan budaya menjadi bagian yang tidak terpisahkan dari setiap lembar kain yang dihasilkan.
+    </p>
+
+    <h2 class="text-2xl font-display font-bold text-gray-900 mt-10 mb-4">Dari Warisan Budaya Menuju Peluang Ekonomi Kreatif</h2>
+    <p class="mb-6">
+      Di balik nilai budaya yang melekat pada setiap lembar kain, mahasiswa KKN Universitas Gadjah Mada melihat bahwa tenun ikat juga menyimpan potensi ekonomi yang masih terbuka untuk dikembangkan. Selama melakukan observasi di Desa Mondu, tim menemukan bahwa sebagian besar hasil tenun masih dipasarkan dalam bentuk kain. Produk tersebut umumnya dijual kepada pengepul, dibawa ke pasar, atau dibeli langsung oleh wisatawan yang datang ke Sumba.
+Pola pemasaran tersebut memang telah berlangsung cukup lama dan menjadi sumber pendapatan bagi sebagian keluarga. Namun, nilai jual kain akan jauh lebih tinggi apabila diikuti dengan proses pengolahan lanjutan. Berbagai daerah di Indonesia telah menunjukkan bahwa kain tradisional tidak hanya dipasarkan sebagai lembaran kain, tetapi juga diolah menjadi tas, dompet, syal, sepatu, aksesori, hingga dekorasi rumah yang memiliki nilai tambah lebih besar.
+Perkembangan industri kreatif dalam beberapa tahun terakhir juga menunjukkan meningkatnya minat masyarakat terhadap produk lokal yang mengangkat identitas budaya. Di tengah tren fesyen berkelanjutan (sustainable fashion), produk yang dibuat secara tradisional justru memiliki daya tarik tersendiri karena setiap karya memiliki karakter yang berbeda dan tidak diproduksi secara massal.
+    </p>
+
+    <h2 class="text-2xl font-display font-bold text-gray-900 mt-10 mb-4">Tantangan Pemasaran Masih Perlu Diatasi</h2>
+    <p class="mb-6">
+      Meskipun memiliki kualitas yang baik, pemasaran kain tenun di Desa Mondu masih menghadapi sejumlah tantangan. Berdasarkan hasil pengamatan mahasiswa KKN, sebagian besar penenun masih mengandalkan jaringan pemasaran konvensional. Penjualan umumnya terjadi melalui pengepul, pesanan dari kerabat, maupun wisatawan yang datang secara langsung. Cara tersebut memang cukup membantu penjualan, tetapi jangkauannya masih terbatas sehingga produk sulit dikenal oleh konsumen di luar daerah.
+Padahal, perkembangan teknologi digital membuka peluang yang jauh lebih luas. Media sosial, marketplace, hingga laman web dapat dimanfaatkan sebagai etalase untuk memperkenalkan kain tenun kepada calon pembeli dari berbagai daerah, bahkan mancanegara. Selain memperluas pasar, pemasaran digital juga memungkinkan para penenun membangun identitas produk melalui cerita mengenai proses pembuatan, filosofi motif, serta nilai budaya yang terkandung di dalam setiap kain.
+    </p>
+
+    <h2 class="text-2xl font-display font-bold text-gray-900 mt-10 mb-4">Menambah Nilai, Bukan Mengubah Tradisi</h2>
+    <p class="mb-6">
+      Bagi masyarakat Desa Mondu, pengembangan produk berbasis tenun tidak berarti meninggalkan tradisi yang telah diwariskan oleh para leluhur. Justru sebaliknya, inovasi menjadi salah satu cara agar warisan budaya tetap memiliki tempat di tengah perubahan zaman. Kain tenun dapat dikembangkan menjadi berbagai produk fungsional tanpa menghilangkan motif maupun makna yang melekat pada setiap helainya.
+Dengan keterampilan yang dimiliki para penenun, Desa Mondu sebenarnya telah memiliki modal utama untuk mengembangkan UMKM berbasis ekonomi kreatif. Yang masih diperlukan adalah penguatan pada aspek desain produk, pengemasan, strategi pemasaran, dan perluasan akses pasar. Kolaborasi antara masyarakat, pemerintah daerah, perguruan tinggi, serta pelaku usaha menjadi langkah penting agar nilai ekonomi kain tenun dapat terus meningkat tanpa mengurangi identitas budaya yang menjadi ciri khasnya. Di balik setiap helai benang, tersimpan peluang untuk menggerakkan ekonomi desa, memperkuat UMKM lokal, sekaligus menjaga agar tradisi yang diwariskan lintas generasi tetap hidup dan relevan bagi masyarakat masa kini.4
+    </p>
+
+    <h2 class="text-2xl font-display font-bold text-gray-900 mt-10 mb-4">Kesimpulan</h2>
+    <p class="mb-6">
+      Kolaborasi menjadi kunci dalam membangun ekosistem ekonomi kreatif yang berkelanjutan. Pemerintah desa, kelompok penenun, pelaku UMKM, perguruan tinggi, dan sektor swasta memiliki peran yang saling melengkapi. Pemerintah dapat memperkuat akses pembiayaan dan pelatihan, perguruan tinggi menghadirkan inovasi dan pendampingan, sementara pelaku usaha membuka akses pasar yang lebih luas. Sinergi tersebut akan menciptakan rantai nilai yang mampu meningkatkan kesejahteraan masyarakat tanpa menghilangkan karakter budaya lokal.5
+Di tengah pesatnya perkembangan industri tekstil modern, kain tenun Sumba tetap memiliki tempat yang istimewa. Nilainya tidak lahir dari kecepatan produksi, melainkan dari ketekunan, kesabaran, dan cerita yang terkandung di dalam setiap motif. Tidak ada dua lembar kain yang benar-benar sama karena masing-masing dikerjakan secara manual dengan sentuhan tangan para penenun. Keunikan inilah yang menjadikan tenun Sumba memiliki nilai eksklusif sekaligus daya saing yang kuat di pasar produk budaya.
+Desa Mondu memiliki modal yang tidak dimiliki oleh banyak daerah lain, yaitu perpaduan antara kekayaan budaya, keterampilan masyarakat, dan semangat untuk terus menjaga tradisi. Apabila potensi tersebut dikembangkan melalui inovasi, peningkatan kualitas produk, serta strategi pemasaran yang tepat, kain tenun tidak hanya akan menjadi simbol kebanggaan masyarakat Sumba Timur, tetapi juga menjadi penggerak utama ekonomi kreatif desa.
+Pada akhirnya, setiap helai benang yang dirangkai oleh para penenun menyimpan lebih dari sekadar keindahan visual. Di dalamnya terdapat pengetahuan yang diwariskan lintas generasi, kerja keras yang tidak terlihat, dan harapan akan kehidupan yang lebih baik. Menjaga tradisi menenun berarti menjaga identitas budaya. Mengembangkan tenun sebagai produk ekonomi kreatif berarti membuka peluang kesejahteraan bagi masyarakat. Dari rumah-rumah sederhana di Desa Mondu, kisah itu terus ditenun perlahan, penuh ketelitian, dan dengan keyakinan bahwa warisan budaya dapat menjadi kekuatan untuk membangun masa depan.
+    </p>
+
+    <h2 class="text-2xl font-display font-bold text-gray-900 mt-10 mb-4">Daftar Pustaka</h2>
+    <p class="mb-6">
+      1 Kementerian Pendidikan Dasar dan Menengah Republik Indonesia. (2021). Tenun Ikat Sumba. Referensi Warisan Budaya Takbenda Indonesia. https://referensi.data.kemendikdasmen.go.id/budayakita/wbtb/objek/AA000647
+    </p>
+    <p class="mb-6">
+      2 Soeriadiredja, P. (2013). Dinamika kain tenun tradisional Sumba. Makalah dipresentasikan pada seminar Tenun Ikat Sumba: Warisan Budaya yang Menembus Zaman, Museum Tekstil Jakarta, Jakarta, Indonesia. 
+    </p>
+    <p class="mb-6">
+      3 Dharma Shanti, H. (2023). Kemendikbud adakan pendataan ekosistem tenun di Sumba Timur. ANTARA News. https://www.antaranews.com/berita/3555297/kemendikbud-adakan-pendataan-ekosistem-tenun-di-sumba-timur.
+    </p>
+    <p class="mb-6">
+      4 McCullagh, R. R. (2023). Refleksi pengembangan UMKM kain tenun Sumba Timur. Dalam A. Widiana, M. Sapulette, & E. Simarmata (Ed.), Membangun UMKM pariwisata dan ekonomi kreatif di Indonesia Timur (hlm. 30–49). Economic Research Institute for ASEAN and East Asia (ERIA) & Kementerian Perdagangan Republik Indonesia. https://www.eria.org/uploads/media/Books/2023-Membangun-UMKM-Indonesia-Timur/7_ch.3-Sumba-Timur-Tenun.pdf 
+    </p>
+    <p class="mb-6">
+      5 Kementerian Pariwisata dan Ekonomi Kreatif Republik Indonesia. (2023). Pengembangan Ekonomi Kreatif Berbasis Warisan Budaya. https://kemenparekraf.id/kemenparekraf-dan-pelestarian-budaya-lokal-di-destinasi-pariwisata/.
+    </p>
+
+    <!-- Support CTA -->
+    <!-- <div class="bg-white p-8 rounded-2xl shadow-sm border border-green-100 my-12 text-center">
+      <h3 class="text-xl font-bold text-gray-900 mb-3 font-display">Beli Produk Tenun Langsung dari Pengrajin</h3>
+      <p class="text-gray-600 mb-6 text-sm">Dengan membeli kain tenun secara langsung, Anda membantu memotong rantai distribusi yang panjang sehingga keuntungan dapat dinikmati seutuhnya oleh para perempuan penenun di Desa Mondu.</p>
+      <a href="index.html#mitra" class="inline-flex justify-center items-center px-8 py-3 bg-green-700 hover:bg-green-800 text-white font-semibold rounded-full transition">
+        Hubungi Galeri Tenun Desa
+      </a>
+    </div> -->
+  </article>
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER (Replicated exactly)
+═══════════════════════════════════════════════════════ -->
+<div class="footer-pre-wrap" aria-hidden="true" style="background: #1A2E1A; height: 4rem; width: 100%;"></div>
+<footer class="footer" id="footer" style="margin-top:auto;">
+  <div class="footer-clip" aria-hidden="true"></div>
+  <div class="footer-inner" style="padding-top: 2rem;">
+    <!-- Footer Links Row -->
+    <div class="footer-links-row">
+      <div class="footer-brand">
+        <span class="footer-logo"><span class="logo-dot">•</span>jelita<span class="logo-accent">.kanatang</span></span>
+        <p class="footer-tagline">Portal Wisata dan UMKM Desa Mondu, Sumba Timur</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" id="footer-instagram" aria-label="Instagram jelita.kanatang">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="social-btn" id="footer-facebook" aria-label="Facebook jelita.kanatang">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" class="social-btn" id="footer-youtube" aria-label="YouTube jelita.kanatang">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42C22.4212 5.94541 22.1793 5.51057 21.8387 5.15941C21.498 4.80824 21.0708 4.55318 20.6 4.42C18.88 4 12 4 12 4C12 4 5.12 4 3.4 4.46C2.92925 4.59318 2.50198 4.84824 2.16135 5.19941C1.82072 5.55057 1.57879 5.98541 1.46 6.46C1.14521 8.20556 0.991235 9.97631 1 11.75C0.988787 13.537 1.14277 15.3213 1.46 17.08C1.59096 17.5398 1.83831 17.9581 2.17814 18.2945C2.51798 18.6308 2.93882 18.8738 3.4 19C5.12 19.46 12 19.46 12 19.46C12 19.46 18.88 19.46 20.6 19C21.0708 18.8668 21.498 18.6118 21.8387 18.2606C22.1793 17.9094 22.4212 17.4746 22.54 17C22.8524 15.2676 23.0063 13.5103 23 11.75C23.0112 9.96295 22.8573 8.1787 22.54 6.42Z" stroke="currentColor" stroke-width="2"/><path d="M9.75 15.02L15.5 11.75L9.75 8.48V15.02Z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-nav-col">
+        <h4 class="footer-nav-title">Navigasi</h4>
+        <ul class="footer-nav-list">
+          <li><a href="index.html#home" id="footer-nav-home">Home</a></li>
+          <li><a href="index.html#about" id="footer-nav-about">About</a></li>
+          <li><a href="index.html#wisata" id="footer-nav-wisata">Desa Wisata</a></li>
+          <li><a href="index.html#umkm-pangan" id="footer-nav-pangan">UMKM Pangan</a></li>
+          <li><a href="index.html#umkm-desa" id="footer-nav-desa">UMKM Desa</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <h4 class="footer-nav-title">Informasi</h4>
+        <ul class="footer-nav-list info-list">
+          <li>📍 Desa Mondu, Kec. Kanatang</li>
+          <li>🏙 Kab. Sumba Timur, NTT</li>
+          <li>✉ jelita.kanatang@gmail.com</li>
+          <li>📞 +62 821-xxxx-xxxx</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-copyright" id="footer-copyright">
+      <div class="copyright-divider"></div>
+      <p>© 2026 KKN PPM UGM - Bentang Kanatang | Universitas Kristen Wira Wacana Sumba</p>
+      <p class="copyright-sub"> </p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas">
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+</body>
+</html>

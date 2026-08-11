@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="jelita.kanatang — Jelajahi pesona alam, budaya, dan produk lokal Desa Mondu, Sumba Timur. Platform desa wisata dan UMKM unggulan." />
+  <meta name="keywords" content="Desa Mondu, Wisata Sumba, KKN UGM, UMKM Sumba, jelita kanatang, desa wisata" />
+  <meta name="author" content="KKN PPM UGM - Bentang Kanatang" />
+  <title>jelita.kanatang — Desa Wisata &amp; UMKM Mondu, Sumba Timur</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JavaScript and Tailwind -->
+  <script src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     ① FLOATING PILL HEADER (NEW CODE)
+═══════════════════════════════════════════════════════ -->
+<header id="site-header" role="banner">
+  <div class="nav-inner">
+
+    <!-- Logo with placeholder img -->
+    <a href="#home" class="nav-logo" id="logo-link" aria-label="jelita.kanatang homepage">
+      <span class="nav-logo-img" aria-hidden="true">
+        <img src="images/no bg.png" alt="jelita.kanatang logo" width="28" height="28" />
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V21H3V9.5z"/><rect x="9" y="14" width="6" height="7"/></svg> -->
+      </span>
+      jelita<span>.kanatang</span>
+    </a>
+
+    <!-- Desktop nav (Mitra button inside nav group — no gap) -->
+    <nav class="new-nav-links" id="main-nav" aria-label="Main navigation">
+      <a href="#home" class="active" id="nav-link-home">Home</a>
+      <a href="#about" id="nav-link-about">About</a>
+      <a href="#wisata" id="nav-link-wisata">Desa Wisata</a>
+
+      <!-- UMKM Dropdown -->
+      <div class="new-dropdown-wrapper">
+        <a href="#umkm-pangan" id="nav-link-umkm" aria-haspopup="true">
+          UMKM
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-left:2px;" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </a>
+        <div class="new-dropdown-menu" role="menu">
+          <a href="#umkm-pangan" role="menuitem" id="nav-umkm-pangan">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a5 5 0 0 1 5 5c0 5-5 13-5 13S7 12 7 7a5 5 0 0 1 5-5z"/></svg>
+            UMKM Pangan Lokal
+          </a>
+          <a href="#umkm-desa" role="menuitem" id="nav-umkm-desa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            UMKM Desa
+          </a>
+        </div>
+      </div>
+
+      <!-- Mitra directly next to UMKM (no gap) -->
+      <a href="#mitra" class="new-nav-mitra" id="nav-mitra-btn">Mitra</a>
+    </nav>
+
+    <!-- Hamburger (mobile) -->
+    <button class="new-hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
+      <span id="hb-1"></span>
+      <span id="hb-2"></span>
+      <span id="hb-3"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile nav panel -->
+<nav class="new-mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="#home" id="mob-home">Home</a>
+  <a href="#about" id="mob-about">About</a>
+  <a href="#wisata" id="mob-wisata">Desa Wisata</a>
+  <a href="#umkm-pangan" id="mob-umkm-pangan">UMKM Pangan Lokal</a>
+  <a href="#umkm-desa" id="mob-umkm-desa">UMKM Desa</a>
+  <a href="#mitra" class="mob-mitra" id="mob-mitra">Mitra</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ② HERO SECTION (NEW CODE — full-screen)
+═══════════════════════════════════════════════════════ -->
+<section id="home" class="new-hero-section" aria-label="Hero — Desa Mondu">
+
+  <!-- Background placeholder backgroud foto desa -->
+  <div class="new-hero-bg" id="hero-bg" aria-hidden="true">
+    <img src="images/landingPage.png">
+  </div>
+  <div class="new-hero-overlay" aria-hidden="true"></div>
+
+  <div class="new-hero-content">
+
+    <!-- Left: Headline + CTA -->
+    <div class="new-hero-left" style="animation: fadeInUp 0.7s ease 0.1s both;">
+      <!-- <div class="new-hero-tag">
+        <span class="new-hero-dot" aria-hidden="true"></span>
+        Desa Mondu, Sumba Timur
+      </div> -->
+
+      <h1 class="new-hero-title">
+        Discover the<br />
+        <em>Soul of Mondu</em>,<br />
+        Sumba Timur
+      </h1>
+
+      <p class="new-hero-desc">
+        Selamat datang di jelita.kanatang — portal resmi wisata dan UMKM Desa Mondu. Alam yang memukau, budaya yang lestari, produk lokal yang autentik.
+      </p>
+
+      <a href="#wisata" class="new-hero-btn" id="hero-explore-btn">
+        <span>Explore Sekarang</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Right: Single-Card Slider -->
+    <div style="animation: fadeInRight 0.75s ease 0.3s both;">
+      <div class="new-slider-container" id="featured-slider">
+
+        <!-- Viewport -->
+        <div class="new-slider-viewport" id="slider-viewport">
+          <div class="new-slider-track" id="slider-track" role="list">
+
+            <!-- Card 1 -->
+            <div class="new-slide-card" role="listitem" aria-label="Slide 1 of 4: Pantai Mondu">
+              <div class="new-slide-img">
+                Replace with: <img src="images/kapihak/" alt="Pantai Mondu" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+                <span>Pantai Kapihak — Replace with photo</span>
+              </div>
+              <div class="new-slide-overlay" aria-hidden="true"></div>
+              <div class="new-slide-content">
+                <span class="new-slide-badge">Wisata Alam</span>
+                <h3 class="new-slide-title">Pantai Kapihak</h3>
+                <p class="new-slide-desc">Pasir putih bersih, ombak biru jernih, terumbu karang, dan hutan mangrove.</p>
+                <div class="new-slide-loc">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Pesisir Timur, Desa Mondu
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="new-slide-card" role="listitem" aria-label="Slide 2 of 4: Situs Megalitik">
+              <div class="new-slide-img">
+                <!-- Replace with: <img src="images/wisata_budaya.jpg" alt="Situs Megalitik" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" /> -->
+                <span>Situs Megalitik — Replace with photo</span>
+              </div>
+              <div class="new-slide-overlay" aria-hidden="true"></div>
+              <div class="new-slide-content">
+                <span class="new-slide-badge">Warisan Budaya</span>
+                <h3 class="new-slide-title">Kampung Adat Pradadita</h3>
+                <p class="new-slide-desc">Kompleks makam batu peninggalan leluhur Sumba berusia ratusan tahun, penuh makna sejarah dan spiritual.</p>
+                <div class="new-slide-loc">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Pusat Desa Mondu
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="new-slide-card" role="listitem" aria-label="Slide 4 of 4: Air Terjun Mondu">
+              <div class="new-slide-img">
+                Replace with: <img src="images/airterjun.JPG" alt="Air Terjun Mondu" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+                <span>Air Terjun Tanggedu Replace with photo</span>
+              </div>
+              <div class="new-slide-overlay" aria-hidden="true"></div>
+              <div class="new-slide-content">
+                <span class="new-slide-badge">Petualangan</span>
+                <h3 class="new-slide-title">Air Terjun Tanggedu</h3>
+                <p class="new-slide-desc">Curug tersembunyi di balik hutan tropis — kolam alami yang jernih.</p>
+                <div class="new-slide-loc">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Hulu Sungai Mondu
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="new-slide-card" role="listitem" aria-label="Slide 3 of 4: Bukit Savana">
+              <div class="new-slide-img">
+                <!-- Replace with: <img src="images/wisata_bukit.jpg" alt="Bukit Savana" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" /> -->
+                <span>Bukit Savana — Replace with photo</span>
+              </div>
+              <div class="new-slide-overlay" aria-hidden="true"></div>
+              <div class="new-slide-content">
+                <span class="new-slide-badge">Panorama</span>
+                <h3 class="new-slide-title">Kampung Adat Prainatang</h3>
+                <p class="new-slide-desc">Hamparan savana keemasan yang membentang luas — spot terbaik menyaksikan sunset dari ketinggian.</p>
+                <div class="new-slide-loc">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Barat Desa Mondu
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="new-slide-card" role="listitem" aria-label="Slide 4 of 4: Air Terjun Mondu">
+              <div class="new-slide-img">
+                Replace with: <img src="images/.JPG" alt="Air Terjun Mondu" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+                <span>Pantai Purukambera</span>
+              </div>
+              <div class="new-slide-overlay" aria-hidden="true"></div>
+              <div class="new-slide-content">
+                <span class="new-slide-badge">Petualangan</span>
+                <h3 class="new-slide-title">Pantai Purukambera</h3>
+                <p class="new-slide-desc">lorem ipsum dolar ipset</p>
+                <div class="new-slide-loc">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Hulu Sungai Mondu
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /slider-track -->
+
+          <!-- Arrow buttons centered over card (absolute overlay) -->
+          <div class="new-arrows-overlay" aria-hidden="true">
+            <button class="new-arrow-btn" id="slider-prev" aria-label="Previous slide">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="new-arrow-btn" id="slider-next" aria-label="Next slide">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div><!-- /slider-viewport -->
+
+        <!-- Dots + counter -->
+        <div class="new-slider-controls">
+          <div class="new-dots" id="slider-dots" role="tablist" aria-label="Slide navigation">
+            <button class="new-dot active" data-index="0" role="tab" aria-selected="true" aria-label="Go to slide 1"></button>
+            <button class="new-dot" data-index="1" role="tab" aria-selected="false" aria-label="Go to slide 2"></button>
+            <button class="new-dot" data-index="2" role="tab" aria-selected="false" aria-label="Go to slide 3"></button>
+            <button class="new-dot" data-index="3" role="tab" aria-selected="false" aria-label="Go to slide 4"></button>
+          </div>
+          <span class="new-counter" aria-live="polite" aria-atomic="true">
+            <span class="cur" id="slider-cur">1</span>/<span id="slider-total">4</span>
+          </span>
+        </div>
+
+      </div><!-- /new-slider-container -->
+    </div><!-- /hero-right -->
+
+  </div><!-- /new-hero-content -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ③ FLOATING HIGHLIGHTS BAR (NEW CODE)
+═══════════════════════════════════════════════════════ -->
+<div class="new-hl-wrapper" aria-label="Desa Mondu at a glance">
+  <div class="new-hl-bar" id="hl-bar">
+    <div class="new-hl-item">
+      <span class="new-hl-num" data-target="12">12+</span>
+      <span class="new-hl-label">Destinasi Wisata</span>
+    </div>
+    <div class="new-hl-div" aria-hidden="true"></div>
+    <div class="new-hl-item">
+      <span class="new-hl-num" data-target="30">30+</span>
+      <span class="new-hl-label">UMKM Aktif</span>
+    </div>
+    <div class="new-hl-div" aria-hidden="true"></div>
+    <div class="new-hl-item">
+      <span class="new-hl-num" data-target="1200">1200+</span>
+      <span class="new-hl-label">Penduduk Desa</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ④ QUICK HIGHLIGHTS (OLD CODE — 3 feature strips)
+═══════════════════════════════════════════════════════ -->
+<!-- <section class="highlights-section" aria-label="Keunggulan Desa Mondu">
+  <div class="highlights-container">
+    <div class="highlight-item">
+      <div class="highlight-icon" aria-hidden="true">🌿</div>
+      <div class="highlight-text">
+        <strong>Alam Tropis yang Memukau</strong>
+        <p>Hutan, pantai, savana, dan air terjun tersembunyi menanti petualangan Anda di Desa Mondu.</p>
+      </div>
+    </div>
+    <div class="highlight-divider" aria-hidden="true"></div>
+    <div class="highlight-item">
+      <div class="highlight-icon" aria-hidden="true">🏛️</div>
+      <div class="highlight-text">
+        <strong>Warisan Budaya Leluhur</strong>
+        <p>Situs megalitik, ritual Marapu, dan tenun ikat tradisional yang masih lestari hingga kini.</p>
+      </div>
+    </div>
+    <div class="highlight-divider" aria-hidden="true"></div>
+    <div class="highlight-item">
+      <div class="highlight-icon" aria-hidden="true">🛒</div>
+      <div class="highlight-text">
+        <strong>UMKM Lokal Berkembang</strong>
+        <p>Lebih dari 30 UMKM aktif menawarkan produk pangan, kerajinan, dan kain tenun khas Sumba.</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑤ ABOUT SECTION (OLD CODE — Tentang Desa Mondu)
+═══════════════════════════════════════════════════════ -->
+<section id="about" class="about-section">
+  <div class="about-container">
+
+    <!-- Left: Photo Collage -->
+    <div class="about-gallery" aria-label="Galeri Foto Desa Mondu">
+      <div class="gallery-grid">
+        <div class="gallery-card gallery-large">
+          <img src="images/hero_mondu.jpg" alt="Pemandangan Desa Mondu" loading="lazy" />
+        </div>
+        <div class="gallery-card gallery-top-right">
+          <img src="images/about_collage1.jpg" alt="Kehidupan Masyarakat Mondu" loading="lazy" />
+        </div>
+        <div class="gallery-card gallery-bottom-left">
+          <img src="images/about_collage2.jpg" alt="Rumah Adat Sumba" loading="lazy" />
+        </div>
+        <div class="gallery-card gallery-bottom-right">
+          <img src="images/wisata_budaya.jpg" alt="Warisan Budaya Mondu" loading="lazy" />
+        </div>
+      </div>
+      <!-- Floating badge -->
+      <div class="gallery-badge" aria-label="Sejak 1800an">
+        <span class="badge-year">1800<span>an</span></span>
+        <span class="badge-label">Warisan Leluhur</span>
+      </div>
+    </div>
+
+    <!-- Right: Narrative -->
+    <div class="about-content">
+      <div class="old-section-tag" aria-label="Tentang Desa">Tentang Desa</div>
+      <h2 class="about-title">Mengenal Lebih Dekat <span class="text-accent">Desa Mondu</span></h2>
+      <p class="about-text">
+        Desa Mondu terletak di Kecamatan Kanatang, Kabupaten Sumba Timur, Nusa Tenggara Timur. Dikelilingi oleh bentang alam savana dan perbukitan hijau yang asri, Desa Mondu menyimpan kekayaan alam dan budaya yang luar biasa.
+      </p>
+      <p class="about-text">
+        Masyarakatnya masih menjaga tradisi Marapu — kepercayaan asli leluhur Sumba — yang tercermin dalam upacara adat, arsitektur rumah tinggi bermenara, hingga kain tenun ikat yang sarat makna filosofis.
+      </p>
+      <p class="about-text">
+        Melalui program KKN PPM UGM bersama Universitas Kristen Wira Wacana Sumba, potensi desa dikembangkan menjadi destinasi wisata yang berkelanjutan, memberdayakan masyarakat lokal dan memperkenalkan keistimewaan Desa Mondu ke khalayak lebih luas.
+      </p>
+      <div class="about-features">
+        <div class="about-feature-item">
+          <span class="feature-check" aria-hidden="true">✓</span>
+          <span>Desa wisata berkelanjutan berbasis komunitas</span>
+        </div>
+        <div class="about-feature-item">
+          <span class="feature-check" aria-hidden="true">✓</span>
+          <span>Produk UMKM lokal dengan nilai kultural tinggi</span>
+        </div>
+        <div class="about-feature-item">
+          <span class="feature-check" aria-hidden="true">✓</span>
+          <span>Akses mudah dari Kota Waingapu (± 30 menit)</span>
+        </div>
+      </div>
+      <a href="#wisata" class="btn-primary" id="about-explore-btn" style="display:inline-flex; margin-top: 2rem;">
+        <span>Explore Desa Wisata</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4.16675 10H15.8334M15.8334 10L10.8334 5M15.8334 10L10.8334 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑥ VALUE PROPOSITION (OLD CODE — 4 columns)
+═══════════════════════════════════════════════════════ -->
+<section class="values-section" aria-label="Keunggulan Desa Mondu">
+  <div class="values-container">
+    <div class="old-section-header centered">
+      <div class="old-section-tag">Mengapa Mondu?</div>
+      <h2>Nilai Unggulan Desa Mondu</h2>
+      <p>Empat pilar keistimewaan yang membuat Desa Mondu layak menjadi destinasi pilihan Anda.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal reveal-delay-1" id="value-alam">
+        <div class="value-icon-wrap">
+          <svg class="value-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="30" cy="30" r="30" fill="url(#grad1)"/>
+            <defs><linearGradient id="grad1" x1="0" y1="0" x2="60" y2="60"><stop offset="0%" stop-color="#4ade80"/><stop offset="100%" stop-color="#16a34a"/></linearGradient></defs>
+            <path d="M15 42L22 28L30 35L38 20L45 42H15Z" fill="white" fill-opacity="0.9"/>
+            <circle cx="30" cy="16" r="5" fill="white" fill-opacity="0.8"/>
+          </svg>
+        </div>
+        <h3 class="value-title">Jelajahi Alam Mondu</h3>
+        <p class="value-desc">Nikmati keindahan alam tropis — dari pantai bertebing dramatis, air terjun tersembunyi, hingga savana luas yang memukau saat golden hour.</p>
+      </div>
+      <div class="value-card reveal reveal-delay-2" id="value-budaya">
+        <div class="value-icon-wrap">
+          <svg class="value-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="30" cy="30" r="30" fill="url(#grad2)"/>
+            <defs><linearGradient id="grad2" x1="0" y1="0" x2="60" y2="60"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#d97706"/></linearGradient></defs>
+            <rect x="18" y="32" width="24" height="12" rx="1" fill="white" fill-opacity="0.9"/>
+            <path d="M15 32L30 18L45 32H15Z" fill="white" fill-opacity="0.9"/>
+            <rect x="26" y="36" width="8" height="8" fill="url(#grad2)"/>
+          </svg>
+        </div>
+        <h3 class="value-title">Jejak Warisan Leluhur</h3>
+        <p class="value-desc">Telusuri situs megalitik, rumah adat Marapu, dan ritual leluhur yang masih dijalankan — warisan budaya Sumba yang tak ternilai harganya.</p>
+      </div>
+      <div class="value-card reveal reveal-delay-3" id="value-umkm">
+        <div class="value-icon-wrap">
+          <svg class="value-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="30" cy="30" r="30" fill="url(#grad3)"/>
+            <defs><linearGradient id="grad3" x1="0" y1="0" x2="60" y2="60"><stop offset="0%" stop-color="#f472b6"/><stop offset="100%" stop-color="#be185d"/></linearGradient></defs>
+            <path d="M20 22H40L38 38H22L20 22Z" fill="white" fill-opacity="0.9"/>
+            <path d="M17 22L19 18H41L43 22H17Z" fill="white" fill-opacity="0.7"/>
+            <circle cx="25" cy="41" r="2.5" fill="white"/>
+            <circle cx="35" cy="41" r="2.5" fill="white"/>
+          </svg>
+        </div>
+        <h3 class="value-title">Berdayakan Potensi Desa</h3>
+        <p class="value-desc">Dukung para pengrajin dan pelaku usaha lokal. Setiap pembelian produk UMKM Desa Mondu berkontribusi langsung pada kesejahteraan masyarakat.</p>
+      </div>
+      <div class="value-card reveal reveal-delay-4" id="value-akses">
+        <div class="value-icon-wrap">
+          <svg class="value-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="30" cy="30" r="30" fill="url(#grad4)"/>
+            <defs><linearGradient id="grad4" x1="0" y1="0" x2="60" y2="60"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0369a1"/></linearGradient></defs>
+            <circle cx="30" cy="26" r="8" fill="white" fill-opacity="0.9"/>
+            <path d="M30 34C30 34 20 42 20 46H40C40 42 30 34 30 34Z" fill="white" fill-opacity="0.9"/>
+            <circle cx="30" cy="26" r="3" fill="url(#grad4)"/>
+          </svg>
+        </div>
+        <h3 class="value-title">Eksplorasi Lebih Mudah</h3>
+        <p class="value-desc">Panduan wisata lengkap, peta interaktif, dan informasi UMKM dalam satu portal — memudahkan perjalanan Anda ke Desa Mondu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑦ TOURISM GRID SECTION (OLD CODE)
+═══════════════════════════════════════════════════════ -->
+<section id="wisata" class="wisata-section">
+  <div class="wisata-container">
+    <div class="old-section-header centered">
+      <div class="old-section-tag">Desa Wisata</div>
+      <h2>Destinasi Unggulan Mondu</h2>
+      <p>Temukan pengalaman wisata autentik yang memadukan keindahan alam dan kekayaan budaya Sumba Timur.</p>
+    </div>
+    <div class="wisata-grid">
+
+      <!-- Card 1 -->
+      <article class="wisata-card reveal" id="wisata-card-pantai">
+        <div class="wisata-thumb">
+          <img src="images/wisata_pantai.jpg" alt="Pantai Indah Mondu" loading="lazy" />
+          <div class="wisata-badge-cat">Alam</div>
+        </div>
+        <div class="wisata-body">
+          <h3 class="wisata-title">Pantai Kapihak</h3>
+          <p class="wisata-desc">Hamparan pasir putih yang terbentang luas dengan ombak biru jernih dan tebing karang dramatis. Spot sempurna untuk sunset dan snorkeling.</p>
+          <div class="wisata-meta">
+            <span class="meta-tag">📍 Pesisir Timur</span>
+            <span class="meta-tag">⏱ 15 menit dari pusat</span>
+          </div>
+          <div class="wisata-actions">
+            <a href="pantai-kapihak.html" class="btn-detail" id="btn-detail-pantai">Detail</a>
+            <button class="btn-lokasi" id="btn-lokasi-pantai" data-name="Pantai Mondu" data-maps="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126560.2573!2d120.1500!3d-9.8500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2da18500eacb1e11%3A0x8c37c3aad8b03f9b!2sSumba%20Timur%2C%20East%20Nusa%20Tenggara!5e0!3m2!1sen!2sid!4v1690000000000">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5C5.515 1.5 3.5 3.515 3.5 6C3.5 9.5 8 14.5 8 14.5C8 14.5 12.5 9.5 12.5 6C12.5 3.515 10.485 1.5 8 1.5ZM8 7.5C7.172 7.5 6.5 6.828 6.5 6C6.5 5.172 7.172 4.5 8 4.5C8.828 4.5 9.5 5.172 9.5 6C9.5 6.828 8.828 7.5 8 7.5Z" fill="currentColor"/></svg>
+              Lokasi
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="wisata-card reveal reveal-delay-1" id="wisata-card-megalitik">
+        <div class="wisata-thumb">
+          <img src="images/wisata_budaya.jpg" alt="Situs Megalitik Mondu" loading="lazy" />
+          <div class="wisata-badge-cat">Kampung Adat</div>
+        </div>
+        <div class="wisata-body">
+          <h3 class="wisata-title">Kampung Adat Pradadita</h3>
+          <p class="wisata-desc">Kompleks makam batu megalitik peninggalan leluhur Sumba yang berusia ratusan tahun. Warisan budaya yang sarat nilai sejarah dan spiritual.</p>
+          <div class="wisata-meta">
+            <span class="meta-tag">📍 Pusat Desa</span>
+            <span class="meta-tag">⏱ 5 menit dari pusat</span>
+          </div>
+          <div class="wisata-actions">
+            <a href="kampung-adat.html" class="btn-detail" id="btn-detail-megalitik">Detail</a>
+            <button class="btn-lokasi" id="btn-lokasi-megalitik" data-name="Situs Megalitik Mondu" data-maps="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126560.2573!2d120.1800!3d-9.8300!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2da18500eacb1e11%3A0x8c37c3aad8b03f9b!2sSumba%20Timur%2C%20East%20Nusa%20Tenggara!5e0!3m2!1sen!2sid!4v1690000000001">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5C5.515 1.5 3.5 3.515 3.5 6C3.5 9.5 8 14.5 8 14.5C8 14.5 12.5 9.5 12.5 6C12.5 3.515 10.485 1.5 8 1.5ZM8 7.5C7.172 7.5 6.5 6.828 6.5 6C6.5 5.172 7.172 4.5 8 4.5C8.828 4.5 9.5 5.172 9.5 6C9.5 6.828 8.828 7.5 8 7.5Z" fill="currentColor"/></svg>
+              Lokasi
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="wisata-card reveal reveal-delay-2" id="wisata-card-airterjun">
+        <div class="wisata-thumb">
+          <img src="images/wisata_air_terjun.jpg" alt="Air Terjun Mondu" loading="lazy" />
+          <div class="wisata-badge-cat">Alam</div>
+        </div>
+        <div class="wisata-body">
+          <h3 class="wisata-title">Air Terjun Tanggedu</h3>
+          <p class="wisata-desc">Curug tersembunyi di tengah savana dengan kolam alami yang jernih. Rasakan kesegaran dan ketenangan alam yang belum banyak dijamah wisatawan.</p>
+          <div class="wisata-meta">
+            <span class="meta-tag">📍 Hulu Sungai</span>
+            <span class="meta-tag">⏱ 30 menit trekking</span>
+          </div>
+          <div class="wisata-actions">
+            <a href="tanggedu.html" class="btn-detail" id="btn-detail-airterjun">Detail</a>
+            <button class="btn-lokasi" id="btn-lokasi-airterjun" data-name="Air Terjun Mondu" data-maps="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126560.2573!2d120.1500!3d-9.8200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2da18500eacb1e11%3A0x8c37c3aad8b03f9b!2sSumba%20Timur%2C%20East%20Nusa%20Tenggara!5e0!3m2!1sen!2sid!4v1690000000002">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5C5.515 1.5 3.5 3.515 3.5 6C3.5 9.5 8 14.5 8 14.5C8 14.5 12.5 9.5 12.5 6C12.5 3.515 10.485 1.5 8 1.5ZM8 7.5C7.172 7.5 6.5 6.828 6.5 6C6.5 5.172 7.172 4.5 8 4.5C8.828 4.5 9.5 5.172 9.5 6C9.5 6.828 8.828 7.5 8 7.5Z" fill="currentColor"/></svg>
+              Lokasi
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="wisata-card reveal" id="wisata-card-bukit">
+        <div class="wisata-thumb">
+          <img src="images/wisata_bukit.jpg" alt="Bukit Savana Mondu" loading="lazy" />
+          <div class="wisata-badge-cat">Kampung Adat</div>
+        </div>
+        <div class="wisata-body">
+          <h3 class="wisata-title">Kampung Adat Prainatang</h3>
+          <p class="wisata-desc">Perbukitan savana dengan hamparan rumput emas yang menawan. Spot terbaik untuk menikmati panorama Desa Mondu dari ketinggian saat matahari terbenam.</p>
+          <div class="wisata-meta">
+            <span class="meta-tag">📍 Barat Desa</span>
+            <span class="meta-tag">⏱ 20 menit dari pusat</span>
+          </div>
+          <div class="wisata-actions">
+            <a href="kampung-prainatang.html" class="btn-detail" id="btn-detail-bukit">Detail</a>
+            <button class="btn-lokasi" id="btn-lokasi-bukit" data-name="Bukit Savana Mondu" data-maps="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126560.2573!2d120.1600!3d-9.8400!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2da18500eacb1e11%3A0x8c37c3aad8b03f9b!2sSumba%20Timur%2C%20East%20Nusa%20Tenggara!5e0!3m2!1sen!2sid!4v1690000000003">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5C5.515 1.5 3.5 3.515 3.5 6C3.5 9.5 8 14.5 8 14.5C8 14.5 12.5 9.5 12.5 6C12.5 3.515 10.485 1.5 8 1.5ZM8 7.5C7.172 7.5 6.5 6.828 6.5 6C6.5 5.172 7.172 4.5 8 4.5C8.828 4.5 9.5 5.172 9.5 6C9.5 6.828 8.828 7.5 8 7.5Z" fill="currentColor"/></svg>
+              Lokasi
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="wisata-card reveal reveal-delay-1" id="wisata-card-kampungadat">
+        <div class="wisata-thumb">
+          <img src="images/about_collage2.jpg" alt="Kampung Adat Mondu" loading="lazy" />
+          <div class="wisata-badge-cat">Alam</div>
+        </div>
+        <div class="wisata-body">
+          <h3 class="wisata-title">Pantai Purukambera</h3>
+          <p class="wisata-desc">Menelusuri kampung adat dengan rumah-rumah bertiang tinggi khas Sumba. Saksikan kehidupan sehari-hari masyarakat yang masih memegang teguh adat istiadat.</p>
+          <div class="wisata-meta">
+            <span class="meta-tag">📍 Tengah Desa</span>
+            <span class="meta-tag">⏱ 10 menit dari pusat</span>
+          </div>
+          <div class="wisata-actions">
+            <a href="purukambera.html" class="btn-detail" id="btn-detail-kampungadat">Detail</a>
+            <button class="btn-lokasi" id="btn-lokasi-kampungadat" data-name="Kampung Adat Mondu" data-maps="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126560.2573!2d120.1900!3d-9.8300!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2da18500eacb1e11%3A0x8c37c3aad8b03f9b!2sSumba%20Timur%2C%20East%20Nusa%20Tenggara!5e0!3m2!1sen!2sid!4v1690000000004">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5C5.515 1.5 3.5 3.515 3.5 6C3.5 9.5 8 14.5 8 14.5C8 14.5 12.5 9.5 12.5 6C12.5 3.515 10.485 1.5 8 1.5ZM8 7.5C7.172 7.5 6.5 6.828 6.5 6C6.5 5.172 7.172 4.5 8 4.5C8.828 4.5 9.5 5.172 9.5 6C9.5 6.828 8.828 7.5 8 7.5Z" fill="currentColor"/></svg>
+              Lokasi
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <!-- <article class="wisata-card reveal reveal-delay-2" id="wisata-card-komunitas">
+        <div class="wisata-thumb">
+          <img src="images/about_collage1.jpg" alt="Wisata Komunitas Mondu" loading="lazy" />
+          <div class="wisata-badge-cat">Komunitas</div>
+        </div>
+        <div class="wisata-body">
+          <h3 class="wisata-title">Wisata Komunitas</h3>
+          <p class="wisata-desc">Bergabunglah dengan kegiatan komunitas desa — belajar menenun, memasak makanan tradisional, atau mengikuti upacara adat yang autentik bersama warga lokal.</p>
+          <div class="wisata-meta">
+            <span class="meta-tag">📍 Balai Desa</span>
+            <span class="meta-tag">⏱ By appointment</span>
+          </div>
+          <div class="wisata-actions">
+            <a href="wisata-detail.html" class="btn-detail" id="btn-detail-komunitas">Detail</a>
+            <button class="btn-lokasi" id="btn-lokasi-komunitas" data-name="Balai Desa Mondu" data-maps="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126560.2573!2d120.1700!3d-9.8300!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2da18500eacb1e11%3A0x8c37c3aad8b03f9b!2sSumba%20Timur%2C%20East%20Nusa%20Tenggara!5e0!3m2!1sen!2sid!4v1690000000005">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5C5.515 1.5 3.5 3.515 3.5 6C3.5 9.5 8 14.5 8 14.5C8 14.5 12.5 9.5 12.5 6C12.5 3.515 10.485 1.5 8 1.5ZM8 7.5C7.172 7.5 6.5 6.828 6.5 6C6.5 5.172 7.172 4.5 8 4.5C8.828 4.5 9.5 5.172 9.5 6C9.5 6.828 8.828 7.5 8 7.5Z" fill="currentColor"/></svg>
+              Lokasi
+            </button>
+          </div>
+        </div>
+      </article> -->
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑧ UMKM PANGAN LOKAL (OLD CODE)
+═══════════════════════════════════════════════════════ -->
+<section id="umkm-pangan" class="umkm-section umkm-pangan-section">
+  <div class="umkm-container">
+    <div class="old-section-header">
+      <div class="umkm-label pangan-label"><span>🌾</span> UMKM Pangan Lokal</div>
+      <h2>Produk Pangan Unggulan Desa Mondu</h2>
+      <p>Cita rasa asli Sumba Timur — dibuat dengan tangan, dibesarkan dengan hati.</p>
+    </div>
+    <div class="umkm-grid">
+      <a href="manggulu.html" class="umkm-card reveal" id="umkm-pangan-1">
+        <div class="umkm-img-wrap">
+          <img src="images/umkm/MANGGULU.jpg" alt="Jagung Pulut Mondu" loading="lazy" />
+        </div>
+        <div class="umkm-card-body">
+          <h4>Manggulu</h4>
+          <p class="umkm-desc">Manggulu: Warisan Kuliner Sumba Timur yang Menyimpan Potensi Besar bagi Ketahanan Pangan dan UMKM Desa</p>
+        </div>
+      </a>
+      <a href="ketahanan.html" class="umkm-card reveal reveal-delay-1" id="umkm-pangan-2">
+        <div class="umkm-img-wrap">
+          <img src="images/umkm/Ketahanan Pangan Lokal.jpg" alt="Pisang Kepok Lokal" loading="lazy" />
+        </div>
+        <div class="umkm-card-body">
+          <h4>Desa Mondu: Ketahanan Pangan</h4>
+          <p class="umkm-desc">Desa Mondu: Ketika Kelimpahan Alam Menjadi Fondasi Ketahanan Pangan dan Harapan Ekonomi Lokal</p>
+        </div>
+      </a>
+      <!-- <a href="umkm-detail.html" class="umkm-card reveal reveal-delay-2" id="umkm-pangan-3">
+        <div class="umkm-img-wrap">
+          <img src="images/umkm_pangan.jpg" alt="Kacang Tanah Sumba" loading="lazy" />
+        </div>
+        <div class="umkm-card-body">
+          <h4>Kacang Tanah Mondu</h4>
+          <p class="umkm-desc">Kacang tanah Sumba dikenal karena ukuran bijinya yang kecil namun memiliki profil rasa gurih yang pekat. Dibudidayakan secara organik oleh petani lokal, kacang ini diolah dengan teknik sangrai pasir tradisional.</p>
+        </div>
+      </a>
+      <a href="umkm-detail.html" class="umkm-card reveal reveal-delay-3" id="umkm-pangan-4">
+        <div class="umkm-img-wrap">
+          <img src="images/hero_mondu.jpg" alt="Ubi Jalar Ungu" loading="lazy" />
+        </div>
+        <div class="umkm-card-body">
+          <h4>Ubi Jalar Ungu</h4>
+          <p class="umkm-desc">Ubi jalar ungu menjadi sumber pangan alternatif yang sangat dihargai di ekosistem pertanian Mondu. Sering diolah secara sederhana, ubi ini menjadi sajian hangat saat warga berkumpul bersama.</p>
+        </div>
+      </a> -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑨ UMKM DESA — Kerajinan & Tenun (OLD CODE)
+═══════════════════════════════════════════════════════ -->
+<section id="umkm-desa" class="umkm-section umkm-desa-section">
+  <div class="umkm-container">
+    <div class="old-section-header">
+      <div class="umkm-label desa-label"><span>🧶</span> UMKM Desa</div>
+      <h2>Kerajinan &amp; Tenun Tradisional Mondu</h2>
+      <p>Karya tangan para pengrajin Desa Mondu — sarat makna, tinggi nilai seni.</p>
+    </div>
+    <div class="umkm-grid">
+      <a href="tenun-detail.html" class="umkm-card umkm-card-dark reveal block cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300" id="umkm-desa-1">
+        <div class="umkm-img-wrap">
+          <img src="images/umkm/Tenun Ikat Sumba.jpeg" alt="Tenun Ikat Sumba" loading="lazy" />
+          <!-- <div class="umkm-tag tag-gold">Premium</div> -->
+        </div>
+        <div class="umkm-card-body">
+          <h4>Di Balik Selembar Kain Tenun Sumba</h4>
+          <!-- <p class="umkm-producer">👤 Sanggar Tenun Mama Tene</p> -->
+          <p class="umkm-desc">Sumba Timur – Suara hentakan kayu dari alat tenun bukan mesin terdengar pelan dari salah satu rumah di Desa Mondu, Kecamatan Kanatang, Kabupaten Sumba Timur. Di rumah sederhana itu, seorang perempuan duduk bersila sambil merapikan susunan benang yang membentang di hadapannya. Tangannya bergerak perlahan, menyisipkan setiap helai benang dengan ketelitian yang telah diasah selama bertahun-tahun.</p>
+          <!-- <div class="umkm-price-row"><span class="umkm-price">Rp 450.000</span><span class="umkm-unit">/ lembar</span></div> -->
+        </div>
+      </a>
+      <!-- <a href="tenun-detail.html" class="umkm-card umkm-card-dark reveal reveal-delay-1 block cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300" id="umkm-desa-2">
+        <div class="umkm-img-wrap">
+          <img src="images/umkm_tenun.jpg" alt="Tas Anyaman Lontar" loading="lazy" />
+          <div class="umkm-tag">Kerajinan</div>
+        </div>
+        <div class="umkm-card-body">
+          <h4>Tas Anyaman Daun Lontar</h4>
+          <p class="umkm-producer">👤 Kelompok Anyam Mondu</p>
+          <p class="umkm-desc">Tas dan pernak-pernik anyaman dari daun lontar kering. Ringan, kuat, dan ramah lingkungan — pilihan fashion berkelanjutan.</p>
+          <div class="umkm-price-row"><span class="umkm-price">Rp 75.000</span><span class="umkm-unit">/ pcs</span></div>
+        </div>
+      </a>
+      <a href="tenun-detail.html" class="umkm-card umkm-card-dark reveal reveal-delay-2 block cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300" id="umkm-desa-3">
+        <div class="umkm-img-wrap">
+          <img src="images/umkm_tenun.jpg" alt="Perhiasan Manik Sumba" loading="lazy" />
+          <div class="umkm-tag">Aksesori</div>
+        </div>
+        <div class="umkm-card-body">
+          <h4>Perhiasan Manik Tradisional</h4>
+          <p class="umkm-producer">👤 Ibu Yuli dan Kelompok PKK</p>
+          <p class="umkm-desc">Perhiasan manik-manik warna-warni khas Sumba yang dibuat secara manual. Setiap biji manik mengandung cerita dan doa para pembuatnya.</p>
+          <div class="umkm-price-row"><span class="umkm-price">Rp 120.000</span><span class="umkm-unit">/ set</span></div>
+        </div>
+      </a>
+      <a href="tenun-detail.html" class="umkm-card umkm-card-dark reveal reveal-delay-3 block cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300" id="umkm-desa-4">
+        <div class="umkm-img-wrap">
+          <img src="images/umkm_tenun.jpg" alt="Miniatur Rumah Adat" loading="lazy" />
+          <div class="umkm-tag tag-gold">Seni</div>
+        </div>
+        <div class="umkm-card-body">
+          <h4>Miniatur Rumah Adat Sumba</h4>
+          <p class="umkm-producer">👤 Pengrajin Bapak Umbu Dingu</p>
+          <p class="umkm-desc">Replika rumah adat Sumba bermenara tinggi — cinderamata artistik yang merepresentasikan identitas budaya dan arsitektur leluhur Sumba.</p>
+          <div class="umkm-price-row"><span class="umkm-price">Rp 200.000</span><span class="umkm-unit">/ pcs</span></div>
+        </div>
+      </a> -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑩ MITRA & PARTNERSHIP (NEW SEPARATION)
+═══════════════════════════════════════════════════════ -->
+<!-- <section id="mitra" class="mitra-section-wrap" aria-label="Mitra dan Sponsor" style="background: #f3f4f6; padding: 4rem 1.5rem; color: #1f2937;">
+  <div class="mitra-container" style="max-width: 1280px; margin: 0 auto;">
+    <div class="mitra-header" style="text-align: center; margin-bottom: 2.5rem;">
+      <h2 class="mitra-title" style="color: #111827; font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">Mitra &amp; Partnership</h2>
+      <p class="mitra-subtitle" style="color: #4b5563; max-width: 600px; margin: 0 auto; line-height: 1.6;">Didukung oleh institusi dan organisasi terpercaya yang berkomitmen terhadap pengembangan desa.</p>
+    </div>
+    <div class="mitra-logos">
+      <div class="mitra-logo-item" id="mitra-ugm" aria-label="Universitas Gadjah Mada">
+        <div class="logo-placeholder" style="background: #fff; border: 1px solid #e5e7eb;"><span class="logo-abbr" style="color:#2D6A4F;">UGM</span><span class="logo-name" style="color:#374151;">Universitas Gadjah Mada</span></div>
+      </div>
+      <div class="mitra-logo-item" id="mitra-wira" aria-label="Univ. Kristen Wira Wacana">
+        <div class="logo-placeholder" style="background: #fff; border: 1px solid #e5e7eb;"><span class="logo-abbr" style="color:#2D6A4F;">UNKRISWINA</span><span class="logo-name" style="color:#374151;">Univ. Kristen Wira Wacana</span></div>
+      </div>
+      <div class="mitra-logo-item" id="mitra-desa" aria-label="Pemerintah Desa Mondu">
+        <div class="logo-placeholder" style="background: #fff; border: 1px solid #e5e7eb;"><span class="logo-abbr" style="color:#2D6A4F;">PEMDES</span><span class="logo-name" style="color:#374151;">Pemerintah Desa Mondu</span></div>
+      </div>
+      <div class="mitra-logo-item" id="mitra-pemkab" aria-label="Pemkab Sumba Timur">
+        <div class="logo-placeholder" style="background: #fff; border: 1px solid #e5e7eb;"><span class="logo-abbr" style="color:#2D6A4F;">PEMKAB</span><span class="logo-name" style="color:#374151;">Kab. Sumba Timur</span></div>
+      </div>
+      <div class="mitra-logo-item" id="mitra-kkn" aria-label="KKN PPM UGM">
+        <div class="logo-placeholder" style="background: #fff; border: 1px solid #e5e7eb;"><span class="logo-abbr" style="color:#2D6A4F;">KKN PPM</span><span class="logo-name" style="color:#374151;">KKN PPM UGM 2026</span></div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ═══════════════════════════════════════════════════════
+     ⑪ FOOTER (OLD CODE — diagonal clip + copyright)
+═══════════════════════════════════════════════════════ -->
+<footer class="footer" id="footer">
+  <div class="footer-clip" aria-hidden="true" style="background: #f3f4f6;"></div>
+  <div class="footer-inner" style="padding-top: 2rem;">
+
+    <!-- Footer Links Row -->
+    <div class="footer-links-row">
+      <div class="footer-brand">
+        <span class="footer-logo"><span class="logo-dot">•</span>jelita<span class="logo-accent">.kanatang</span></span>
+        <p class="footer-tagline">Portal Wisata dan UMKM Desa Mondu, Sumba Timur</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" id="footer-instagram" aria-label="Instagram jelita.kanatang">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="social-btn" id="footer-facebook" aria-label="Facebook jelita.kanatang">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" class="social-btn" id="footer-youtube" aria-label="YouTube jelita.kanatang">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42C22.4212 5.94541 22.1793 5.51057 21.8387 5.15941C21.498 4.80824 21.0708 4.55318 20.6 4.42C18.88 4 12 4 12 4C12 4 5.12 4 3.4 4.46C2.92925 4.59318 2.50198 4.84824 2.16135 5.19941C1.82072 5.55057 1.57879 5.98541 1.46 6.46C1.14521 8.20556 0.991235 9.97631 1 11.75C0.988787 13.537 1.14277 15.3213 1.46 17.08C1.59096 17.5398 1.83831 17.9581 2.17814 18.2945C2.51798 18.6308 2.93882 18.8738 3.4 19C5.12 19.46 12 19.46 12 19.46C12 19.46 18.88 19.46 20.6 19C21.0708 18.8668 21.498 18.6118 21.8387 18.2606C22.1793 17.9094 22.4212 17.4746 22.54 17C22.8524 15.2676 23.0063 13.5103 23 11.75C23.0112 9.96295 22.8573 8.1787 22.54 6.42Z" stroke="currentColor" stroke-width="2"/><path d="M9.75 15.02L15.5 11.75L9.75 8.48V15.02Z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-nav-col">
+        <h4 class="footer-nav-title">Navigasi</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#home" id="footer-nav-home">Home</a></li>
+          <li><a href="#about" id="footer-nav-about">About</a></li>
+          <li><a href="#wisata" id="footer-nav-wisata">Desa Wisata</a></li>
+          <li><a href="#umkm-pangan" id="footer-nav-pangan">UMKM Pangan</a></li>
+          <li><a href="#umkm-desa" id="footer-nav-desa">UMKM Desa</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-col">
+        <h4 class="footer-nav-title">Informasi</h4>
+        <ul class="footer-nav-list info-list">
+          <li> Desa Mondu, Kec. Kanatang</li>
+          <li> Kab. Sumba Timur, NTT</li>
+          <li> @gmail.com</li>
+          <li> +62 821-xxxx-xxxx</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright" id="footer-copyright">
+      <div class="copyright-divider"></div>
+      <p>© 2026 KKN PPM UGM - Bentang Kanatang | Universitas Kristen Wira Wacana Sumba</p>
+      <p class="copyright-sub"> </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════
+     MAPS MODAL (OLD CODE)
+═══════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="maps-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <div class="modal-pin-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 1C7.24 1 5 3.24 5 6C5 10 10 17 10 17C10 17 15 10 15 6C15 3.24 12.76 1 10 1ZM10 8C8.9 8 8 7.1 8 6C8 4.9 8.9 4 10 4C11.1 4 12 4.9 12 6C12 7.1 11.1 8 10 8Z" fill="currentColor"/></svg>
+        </div>
+        <h3 class="modal-title" id="modal-title">Lokasi</h3>
+      </div>
+      <button class="modal-close-btn" id="modal-close" aria-label="Tutup modal peta">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="modal-map-wrapper">
+      <iframe id="maps-iframe" src="" title="Peta Lokasi Wisata" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="modal-footer-bar">
+      <a href="#" id="modal-gmaps-link" target="_blank" rel="noopener noreferrer" class="modal-open-gmaps">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 0C5.24 0 3 2.24 3 5C3 8.75 8 14 8 14C8 14 13 8.75 13 5C13 2.24 10.76 0 8 0ZM8 6.5C7.17 6.5 6.5 5.83 6.5 5C6.5 4.17 7.17 3.5 8 3.5C8.83 3.5 9.5 4.17 9.5 5C9.5 5.83 8.83 6.5 8 6.5Z" fill="currentColor"/></svg>
+        Buka di Google Maps
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Back to top -->
+<button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas">
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+</body>
+</html>
